@@ -1,0 +1,16 @@
+{
+"John": {
+	"TimesPerCharacter": [ 0,0.10,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1], 
+	"MovesPerCharacter": [ "John_Stop01","John_Stand01","John_Pitch01","John_Run01","John_Turn01","John_Roll01","John_Walk01","John_Run01","John_Skip01","John_Kick01","John_Stop01" ],
+	"Global": [ 0,0.10,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1], 
+	"John_Walk01": [false,false,false,false,false,false,true,false,false,false,false],
+	"John_Stop01": [true,false,false,false,false,false,false,false,false,false,true],
+	"John_Kick01": [false,false,false,false,false,false,false,false,false,true,false],
+	"John_Pitch01": [false,false,true,false,false,false,false,false,false,false,false],
+	"John_Skip01": [false,false,false,false,false,false,false,false,true,false,false],
+	"John_Stand01": [false,true,false,false,false,false,false,false,false,false,false],
+	"John_Run01": [false,false,false,true,false,false,false,true,false,false,false],
+	"John_Roll01": [false,false,false,false,false,true,false,false,false,false,false],
+	"John_Turn01": [false,false,false,false,true,false,false,false,false,false,false]
+	}
+}
