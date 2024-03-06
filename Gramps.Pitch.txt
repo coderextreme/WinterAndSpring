@@ -1,0 +1,92 @@
+DEF PitchesAnimation Group {
+ children [
+DEF PitchTimer TimeSensor { cycleInterval 5.73 loop TRUE enabled FALSE }
+DEF Pitch_r_metatarsophalangeal_2Pitch OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.7, 1 ] keyValue [ 1 0 0 0, -1 0 0 0.5 -1 0 0 0.7, 1 0 0 0.75, -1 0 0 0.2, 1 0 0 0 ]}
+DEF Pitches_r_talocruralRotInterp OrientationInterpolator { key [ 0, 0.25 0.5, 0.75 1 ] keyValue [ 0 0 1 0, 1 0 0 1.5, 0 0 1 0, -1 0 0 1.5, 0 0 1 0 ] }
+DEF Pitches_r_kneeRotInterp OrientationInterpolator { key [ 0, 0.5, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0 ] }
+DEF Pitches_r_hipRotInterp OrientationInterpolator { key [ 0, 0.25 0.5, 0.75 1 ] keyValue [ 0 0 1 0, -1 0 0 1.5, 0 0 1 0, 1 0 0 1.5, 0 0 1 0 ] }
+DEF Pitches_l_talocruralRotInterp OrientationInterpolator { key [ 0, 0.25 0.5, 0.75 1 ] keyValue [ 0 0 1 0, -1 0 0 1.5, 0 0 1 0, 1 0 0 1.5, 0 0 1 0 ] }
+DEF Pitches_l_kneeRotInterp OrientationInterpolator { key [ 0, 0.5, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0 ] }
+DEF Pitches_l_hipRotInterp OrientationInterpolator { key [ 0, 0.25 0.5, 0.75 1 ] keyValue [0 0 1 0, 1 0 0 1.5, 0 0 1 0, -1 0 0 1.5, 0 0 1 0 ] }
+DEF Pitches_r_radiocarpalRotInterp OrientationInterpolator { key [ 0, 0.5, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0 ] }
+DEF Pitches_r_elbowRotInterp OrientationInterpolator { key [ 0, 0.5, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0 ] }
+DEF Pitches_r_shoulderRotInterp OrientationInterpolator { key [ 0, 0.25 0.5, 0.75 1 ] keyValue [0 0 1 0, 1 0 0 1.5, 0 0 1 0, -1 0 0 1.5, 0 0 1 0 ] }
+DEF Pitches_l_radiocarpalRotInterp OrientationInterpolator { key [ 0, 0.5, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0 ] }
+DEF Pitches_l_elbowRotInterp OrientationInterpolator { key [ 0, 0.5, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0 ] }
+DEF Pitches_l_shoulderRotInterp OrientationInterpolator { key [ 0, 0.25 0.5, 0.75 1 ] keyValue [0 0 1 0, -1 0 0 1.5, 0 0 1 0, 1 0 0 1.5, 0 0 1 0 ] }
+DEF Pitches_headRotInterp OrientationInterpolator { key [ 0, 0.5, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0 ] }
+DEF Pitches_neckRotInterp OrientationInterpolator { key [ 0, 0.25, 0.55, 1 ] keyValue [ 0 0 1 0, 1 0 0 0.55, -1 0 0 1.05, 0 0 1 0 ] }
+DEF Pitches_lower_bodyRotInterp OrientationInterpolator { key [ 0, 0.5, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0 ] }
+DEF Pitches_upper_bodyRotInterp OrientationInterpolator { key [ 0, 0.5, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0 ] }
+DEF Pitches_whole_bodyRotInterp OrientationInterpolator { key [ 0, 0.5, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0 ] }
+DEF Pitches_whole_bodyTransInterp PositionInterpolator { 
+key [ 0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1 ] 
+keyValue [ 0 0 0, 0 -0.15 0, 0 -0.7 0, 0 -0.15 0, 0 0 0, 0 -0.15 0, 0 -0.7 0, 0 -0.15 0, 0 0 0 ] }
+DEF Pitch_l_sternoclavicularRoll OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0 ]}
+ # DEF Pitch_l_acromioclavicularRoll OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0 ]}
+DEF Pitch_r_sternoclavicularRoll OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0 ]}
+ # DEF Pitch_r_acromioclavicularRoll OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0 ]}
+DEF Pitch_sacroiliacYaw OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0 ]}
+DEF Pitch_vl5Yaw OrientationInterpolator { key [ 0, 0.2, 0.4, 0.5, 0.6, 0.8, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0 ]}
+DEF Pitch_vc6Yaw OrientationInterpolator { key [0, 0.2, 0.4, 0.5, 0.6, 0.8, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0 ]}
+DEF Pitch_l_carpometacarpal_1Pitch OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] keyValue [ 1 0 0 0, 1 0 0 0.25, 1 0 0 0.3, 1 0 0 0.27, 1 0 0 0.2, 1 0 0 0 ]}
+DEF Pitch_r_carpometacarpal_1Pitch OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] keyValue [ 1 0 0 0, 1 0 0 0.25, 1 0 0 0.3, 1 0 0 0.27, 1 0 0 0.2, 1 0 0 0 ]}
+]}
+# ex Pitches_
+ROUTE PitchTimer.fraction_changed TO Pitches_r_talocruralRotInterp.set_fraction
+ROUTE PitchTimer.fraction_changed TO Pitches_r_kneeRotInterp.set_fraction
+ROUTE PitchTimer.fraction_changed TO Pitches_r_hipRotInterp.set_fraction
+ROUTE PitchTimer.fraction_changed TO Pitches_l_talocruralRotInterp.set_fraction
+ROUTE PitchTimer.fraction_changed TO Pitches_l_kneeRotInterp.set_fraction
+ROUTE PitchTimer.fraction_changed TO Pitches_l_hipRotInterp.set_fraction
+ROUTE PitchTimer.fraction_changed TO Pitches_lower_bodyRotInterp.set_fraction
+ROUTE PitchTimer.fraction_changed TO Pitches_r_radiocarpalRotInterp.set_fraction
+ROUTE PitchTimer.fraction_changed TO Pitches_r_elbowRotInterp.set_fraction
+ROUTE PitchTimer.fraction_changed TO Pitches_r_shoulderRotInterp.set_fraction
+ROUTE PitchTimer.fraction_changed TO Pitches_l_radiocarpalRotInterp.set_fraction
+ROUTE PitchTimer.fraction_changed TO Pitches_l_elbowRotInterp.set_fraction
+ROUTE PitchTimer.fraction_changed TO Pitches_l_shoulderRotInterp.set_fraction
+ROUTE PitchTimer.fraction_changed TO Pitches_headRotInterp.set_fraction
+ROUTE PitchTimer.fraction_changed TO Pitches_neckRotInterp.set_fraction
+ROUTE PitchTimer.fraction_changed TO Pitches_upper_bodyRotInterp.set_fraction
+ROUTE PitchTimer.fraction_changed TO Pitches_whole_bodyRotInterp.set_fraction
+ROUTE PitchTimer.fraction_changed TO Pitches_whole_bodyTransInterp.set_fraction
+ROUTE PitchTimer.fraction_changed TO Pitch_l_sternoclavicularRoll.set_fraction 
+ # ROUTE PitchTimer.fraction_changed TO Pitch_l_acromioclavicularRoll.set_fraction 
+ROUTE PitchTimer.fraction_changed TO Pitch_r_sternoclavicularRoll.set_fraction 
+ # ROUTE PitchTimer.fraction_changed TO Pitch_r_acromioclavicularRoll.set_fraction 
+ROUTE PitchTimer.fraction_changed TO Pitch_r_metatarsophalangeal_2Pitch.set_fraction 
+ROUTE PitchTimer.fraction_changed TO Pitch_sacroiliacYaw.set_fraction 
+ROUTE PitchTimer.fraction_changed TO Pitch_vl5Yaw.set_fraction 
+ROUTE PitchTimer.fraction_changed TO Pitch_vc6Yaw.set_fraction 
+ROUTE PitchTimer.fraction_changed TO Pitch_l_carpometacarpal_1Pitch.set_fraction 
+ROUTE PitchTimer.fraction_changed TO Pitch_r_carpometacarpal_1Pitch.set_fraction 
+# ex Pitches_
+ROUTE Pitches_r_talocruralRotInterp.value_changed TO Gramps_r_talocrural.rotation
+ROUTE Pitches_r_kneeRotInterp.value_changed TO Gramps_r_knee.rotation
+ROUTE Pitches_r_hipRotInterp.value_changed TO Gramps_r_hip.rotation
+ROUTE Pitches_l_talocruralRotInterp.value_changed TO Gramps_l_talocrural.rotation
+ROUTE Pitches_l_kneeRotInterp.value_changed TO Gramps_l_knee.rotation
+ROUTE Pitches_l_hipRotInterp.value_changed TO Gramps_l_hip.rotation
+ROUTE Pitches_lower_bodyRotInterp.value_changed TO Gramps_sacroiliac.rotation
+ROUTE Pitches_r_radiocarpalRotInterp.value_changed TO Gramps_r_radiocarpal.rotation
+ROUTE Pitches_r_elbowRotInterp.value_changed TO Gramps_r_elbow.rotation
+ROUTE Pitches_r_shoulderRotInterp.value_changed TO Gramps_r_shoulder.rotation
+ROUTE Pitches_l_radiocarpalRotInterp.value_changed TO Gramps_l_radiocarpal.rotation
+ROUTE Pitches_l_elbowRotInterp.value_changed TO Gramps_l_elbow.rotation
+ROUTE Pitches_l_shoulderRotInterp.value_changed TO Gramps_l_shoulder.rotation
+ROUTE Pitches_headRotInterp.value_changed TO Gramps_skullbase.rotation
+#ROUTE Pitches_neckRotInterp.value_changed TO Gramps_vc4.rotation
+ # ROUTE Pitches_upper_bodyRotInterp.value_changed TO Gramps_vl1.rotation
+ # ROUTE Pitches_whole_bodyRotInterp.value_changed TO Gramps_humanoid_root.rotation
+ROUTE Pitches_whole_bodyTransInterp.value_changed TO Gramps_humanoid_root.translation
+ROUTE Pitch_l_sternoclavicularRoll.value_changed TO Gramps_l_sternoclavicular.rotation
+ # ROUTE Pitch_l_acromioclavicularRoll.value_changed TO Gramps_l_acromioclavicular.rotation
+ROUTE Pitch_r_sternoclavicularRoll.value_changed TO Gramps_r_sternoclavicular.rotation
+ # ROUTE Pitch_r_acromioclavicularRoll.value_changed TO Gramps_r_acromioclavicular.rotation
+ROUTE Pitch_r_metatarsophalangeal_2Pitch.value_changed TO Gramps_l_metatarsophalangeal_2.rotation 
+ROUTE Pitch_r_metatarsophalangeal_2Pitch.value_changed TO Gramps_r_metatarsophalangeal_2.rotation 
+ROUTE Pitch_sacroiliacYaw.value_changed TO Gramps_sacroiliac.rotation 
+ROUTE Pitch_vl5Yaw.value_changed TO Gramps_vl5.rotation 
+ # ROUTE Pitch_vc6Yaw.value_changed TO Gramps_vc6.rotation 
+ROUTE Pitch_l_carpometacarpal_1Pitch.value_changed TO Gramps_l_carpometacarpal_1.rotation

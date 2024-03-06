@@ -1,0 +1,85 @@
+DEF KickAnimation Group {
+ children [
+DEF KickTimer TimeSensor { cycleInterval 3.73 loop TRUE enabled FALSE }
+DEF Kick_l_sternoclavicularRoll OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] keyValue [ 0 0 1 0, 0 0 1 0.2, 0 0 1 0.22, 0 0 1 0.2, 0 0 1 0, 0 0 1 0 ]}
+ # DEF Kick_l_acromioclavicularRoll OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1  0.05, 0 0 1 0, 0 0 1 0, 0 0 1 0 ]}
+DEF Kick_l_shoulderRoll OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] keyValue [ 0 0 1 0, 0 0 1 1.76, -0.25 0 1 1.76, 0 0 1 1.256, 0 0 1 0.05, 0 0 1 0 ]}
+DEF Kick_l_ForeArmPitch OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] keyValue [ 1 0 0 0, 1 0 0 -0.55, -1 0.25 0 2.55, 1 0 0 0, 1 0 0 0, 1 0 0 0 ]}
+DEF Kick_l_radiocarpalRoll OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 1 0 0.55, 0 0 1 0, 0 0 1 0, 0 0 1 0 ]}
+DEF Kick_l_carpometacarpal_1Pitch OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] keyValue [ 1 0 0 0, 1 0 0 0.5, 1 0 0 1.1, 1 0 0 0.7, 1 0 0 0.2, 1 0 0 0 ]}
+DEF Kick_r_sternoclavicularRoll OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] keyValue [ 0 0 1 0, 0 0 1 -0.2, 0 0 1 -0.22, 0 0 1 -0.2, 0 0 1 0, 0 0 1 0 ]}
+ # DEF Kick_r_acromioclavicularRoll OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 -0.05, 0 0 1 0, 0 0 1 0, 0 0 1 0 ]}
+DEF Kick_r_shoulderRoll OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] keyValue [ 0 0 1 0, 0 0 1 -1.76, 0.25 0 1 -1.76, 0 0 1 -1.256, 0 0 1 -0.05, 0 0 1 0 ]}
+DEF Kick_r_ForeArmPitch OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] keyValue [ 1 0 0 0, 1 0 0 -0.55, 1 0.25 0 -2.55, 1 0 0 0, 1 0 0 0, 1 0 0 0 ]}
+DEF Kick_r_radiocarpalRoll OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 1 0 -0.55, 0 0 1 0, 0 0 1 0, 0 0 1 0 ]}
+DEF Kick_r_carpometacarpal_1Pitch OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] keyValue [ 1 0 0 0, 1 0 0 0.5, 1 0 0 1.1, 1 0 0 0.7, 1 0 0 0.2, 1 0 0 0 ]}
+DEF Kick_r_hipPitch OrientationInterpolator { key [ 0, 0.2, 0.3, 0.5, 0.6, 0.9, 1 ] keyValue [ 1 0 0 0, 1 0 0 0.9, -1 0 0 1.75, -1 0 0 2.25, -1 0 0 2.0, 1 0 0 0, 1 0 0 0 ]}
+DEF Kick_r_kneePitch OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] keyValue [ 0 0 1 0, 1 0 0 1.95, 1 0 0 1.75, -1 0 0 0.28, 1 0 0 0, 1 0 0 0 ]}
+DEF Kick_l_hipPitch OrientationInterpolator { key [ 0, 0.2, 0.3, 0.5, 0.6, 0.9, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0 ]}
+DEF Kick_l_kneePitch OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0 ]}
+DEF Kick_r_talocruralPitch OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.7, 1 ] keyValue [ 0 0 1 0, -1 0 0 0.9, -1 0 0 0.95, 1 0 0 0.75, -1 0 0 0.05, 1 0 0 0 ]}
+DEF Kick_r_metatarsophalangeal_2Pitch OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.7, 1 ] keyValue [ 1 0 0 0, -1 0 0 0.5 -1 0 0 0.7, 1 0 0 0.75, -1 0 0 0.2, 1 0 0 0 ]}
+DEF Kick_sacroiliacYaw OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] keyValue [ 0 1 0 0, 0 -1 0 0.1, 0 1 0 0, 0 1 -1 0.24, 0 -1 0 0.4, 0 1 0 0 ]}
+DEF Kick_vl5Yaw OrientationInterpolator { key [ 0, 0.2, 0.4, 0.5, 0.6, 0.8, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0 ]}
+DEF Kick_vc6Yaw OrientationInterpolator { key [0, 0.2, 0.4, 0.5, 0.6, 0.8, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0 ]}
+DEF Kick_lower_bodyRotInterp OrientationInterpolator { key [ 0, 0.5, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0 ] }
+DEF Kick_upper_bodyRotInterp OrientationInterpolator { key [ 0, 0.5, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0 ] }
+DEF Kick_whole_bodyRotInterp OrientationInterpolator { key [ 0, 0.5, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0 ] }
+DEF Kick_whole_bodyTransInterp PositionInterpolator { key [ 0, 0.5, 1 ] keyValue [ 0 0 0, 0 0 0, 0 0 0 ] }
+DEF Kick_neckRotInterp OrientationInterpolator { key [ 0, 0.25, 0.55, 1 ] keyValue [ 0 0 1 0, 1 0 0 0.7, 1 0 0 0.5, 0 0 1 0 ] }
+]}
+# ex Kick_
+ROUTE KickTimer.fraction_changed TO Kick_l_sternoclavicularRoll.set_fraction 
+ # ROUTE KickTimer.fraction_changed TO Kick_l_acromioclavicularRoll.set_fraction 
+ROUTE KickTimer.fraction_changed TO Kick_l_shoulderRoll.set_fraction 
+ROUTE KickTimer.fraction_changed TO Kick_l_ForeArmPitch.set_fraction 
+ROUTE KickTimer.fraction_changed TO Kick_l_radiocarpalRoll.set_fraction
+ROUTE KickTimer.fraction_changed TO Kick_l_carpometacarpal_1Pitch.set_fraction 
+ROUTE KickTimer.fraction_changed TO Kick_r_sternoclavicularRoll.set_fraction 
+ # ROUTE KickTimer.fraction_changed TO Kick_r_acromioclavicularRoll.set_fraction 
+ROUTE KickTimer.fraction_changed TO Kick_r_shoulderRoll.set_fraction 
+ROUTE KickTimer.fraction_changed TO Kick_r_ForeArmPitch.set_fraction 
+ROUTE KickTimer.fraction_changed TO Kick_r_radiocarpalRoll.set_fraction 
+ROUTE KickTimer.fraction_changed TO Kick_r_carpometacarpal_1Pitch.set_fraction 
+ROUTE KickTimer.fraction_changed TO Kick_r_hipPitch.set_fraction 
+ROUTE KickTimer.fraction_changed TO Kick_r_kneePitch.set_fraction 
+ROUTE KickTimer.fraction_changed TO Kick_l_hipPitch.set_fraction 
+ROUTE KickTimer.fraction_changed TO Kick_l_kneePitch.set_fraction 
+ROUTE KickTimer.fraction_changed TO Kick_r_talocruralPitch.set_fraction 
+ROUTE KickTimer.fraction_changed TO Kick_r_metatarsophalangeal_2Pitch.set_fraction 
+ROUTE KickTimer.fraction_changed TO Kick_sacroiliacYaw.set_fraction 
+ROUTE KickTimer.fraction_changed TO Kick_vl5Yaw.set_fraction 
+ROUTE KickTimer.fraction_changed TO Kick_vc6Yaw.set_fraction 
+ROUTE KickTimer.fraction_changed TO Kick_lower_bodyRotInterp.set_fraction
+ROUTE KickTimer.fraction_changed TO Kick_upper_bodyRotInterp.set_fraction
+ROUTE KickTimer.fraction_changed TO Kick_whole_bodyRotInterp.set_fraction
+ROUTE KickTimer.fraction_changed TO Kick_whole_bodyTransInterp.set_fraction
+ROUTE KickTimer.fraction_changed TO Kick_neckRotInterp.set_fraction
+# ex Kick_
+ROUTE Kick_l_sternoclavicularRoll.value_changed TO Gramps_l_sternoclavicular.rotation
+ # ROUTE Kick_l_acromioclavicularRoll.value_changed TO Gramps_l_acromioclavicular.rotation
+ROUTE Kick_l_shoulderRoll.value_changed TO Gramps_l_shoulder.rotation
+ROUTE Kick_l_ForeArmPitch.value_changed TO Gramps_l_elbow.rotation
+ROUTE Kick_l_radiocarpalRoll.value_changed TO Gramps_l_radiocarpal.rotation
+ROUTE Kick_l_carpometacarpal_1Pitch.value_changed TO Gramps_l_carpometacarpal_1.rotation
+ROUTE Kick_r_sternoclavicularRoll.value_changed TO Gramps_r_sternoclavicular.rotation
+ # ROUTE Kick_r_acromioclavicularRoll.value_changed TO Gramps_r_acromioclavicular.rotation
+ROUTE Kick_r_shoulderRoll.value_changed TO Gramps_r_shoulder.rotation
+ROUTE Kick_r_ForeArmPitch.value_changed TO Gramps_r_elbow.rotation
+ROUTE Kick_r_radiocarpalRoll.value_changed TO Gramps_r_radiocarpal.rotation
+ROUTE Kick_r_carpometacarpal_1Pitch.value_changed TO Gramps_r_carpometacarpal_1.rotation
+ROUTE Kick_r_hipPitch.value_changed TO Gramps_r_hip.rotation 
+ROUTE Kick_r_kneePitch.value_changed TO Gramps_r_knee.rotation 
+ROUTE Kick_r_talocruralPitch.value_changed TO Gramps_r_talocrural.rotation 
+ROUTE Kick_r_metatarsophalangeal_2Pitch.value_changed TO Gramps_r_metatarsophalangeal_2.rotation 
+ROUTE Kick_l_hipPitch.value_changed TO Gramps_l_hip.rotation 
+ROUTE Kick_l_kneePitch.value_changed TO Gramps_l_knee.rotation 
+ROUTE Kick_r_talocruralPitch.value_changed TO Gramps_l_talocrural.rotation 
+ROUTE Kick_r_metatarsophalangeal_2Pitch.value_changed TO Gramps_l_metatarsophalangeal_2.rotation 
+ROUTE Kick_sacroiliacYaw.value_changed TO Gramps_sacroiliac.rotation 
+ROUTE Kick_vl5Yaw.value_changed TO Gramps_vl5.rotation 
+ # ROUTE Kick_vc6Yaw.value_changed TO Gramps_vc6.rotation 
+ # ROUTE Kick_upper_bodyRotInterp.value_changed TO Gramps_vl1.rotation
+ROUTE Kick_lower_bodyRotInterp.value_changed TO Gramps_sacroiliac.rotation
+ROUTE Kick_whole_bodyRotInterp.value_changed TO Gramps_humanoid_root.rotation
+ROUTE Kick_whole_bodyTransInterp.value_changed TO Gramps_humanoid_root.translation
