@@ -1,0 +1,36 @@
+WeightsProcess.pl -- prepare a Weights report including sums
+replacejoints.pl -- replace the HAnimHumanoid.joints field with USE info.  If no joints field, nothing is done.
+replacepointsvertices.pl -- replace points, vertices and textures in skin field
+takes.json.pl -- takes the main stage file and produces takes.json
+takes.js -- takes the takes.json file and produces the takes.<CHARACTER>.txt file with animations
+substitetimers.pl -- creates substitutions for moves for each character in ProcessDir73/Animations* for each character and all moves for that character
+RoundTrip.pl -- Creates weights output from skeleton
+SkeletonParseLineValidate.pl -- validate the skeleton
+
+centerreport.pl -- create a report comparing input centers to centers in skeleton
+centers.pl
+defdiff.pl -- compare two files interactively
+extractpointsvertices.pl -- takes a VRML skeleton with centers and produces a joint location file
+findpoints.pl -- figure out how many coordinates there are in final product.
+haveDEFaddName.pl -- take a skeleton with DEFs for joints, and create names
+haveIFSmoveToSkin.pl -- Move an indexed face set to the the humanoid skin field
+haveNameAddDEF.pl -- take a HAnim skeleton with a name and add a DEF
+haveNameReplaceTransform.pl -- replace Transforms with HAnimJoints
+haveSkeletonAddBoxes.pl -- add boxes to skeletons. deprecated
+haveSkeletonAddCenters.pl -- replaces centers in skeleton from joint location file
+haveSkeletonAddSkin.pl -- combines a skeleton with skin and one without and combines them to output
+haveSkeletonAddSkinCoord.pl -- if you have a skeleton, will replace skinCoordIndex and skinCoordWeight
+haveSkeletonAddWeights.pl -- if you have a skeleton, will add weights from weights file
+haveSkeletonAddZeroCenters.pl -- make a skeleton with 0 0 0 centers
+haveTransformDEFaddName.pl -- if you have a skeleton with transforms and DEFs, will create better skeleton with Joints
+SkeletonParse.pl -- add skinCoord info to HAnim skeleton
+SkeletonParseLine.pl -- adds a lot of info to skeleton
+SkeletonParseLineValidate.pl -- validation routing
+takes.json.pl -- produces skeleton from main stage
+takes.pl -- produces a report from main stage
+takes.text.pl -- produces a test 
+tohtml.pl -- produces a table from main stage
+
+convertJsonToCenters.js -- convert skeleton in JSON to Centers, applying transforms (incomplete)
+convertTransformsToCenters.js -- convert Transforms in VRML to centers file
+matrix.js -- matrix code
