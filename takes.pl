@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-open(SCENE, "<../X3DJSONLD/0731WSAll.john/0MainStageTotal_7Saved.txt") or die "Couldn't open main stage\n";
+open(SCENE, "<../WinterAndSpring.old/0MainStageTotal_7Saved.txt") or die "Couldn't open main stage\n";
 
 my $line = "";
 my $oldchar = "";

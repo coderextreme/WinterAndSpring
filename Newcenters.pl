@@ -32,7 +32,7 @@ while(<STDIN>) {
 		$jointobj->{DEF} = $defjoint;
 		push @joints, $jointobj;
 	} elsif (/HAnimJoint/) {
-		print STDERR "Couldn't match $_ in centers.pl stdin loop\n";
+		print STDERR "Couldn't match $_ in Newcenters.pl stdin loop\n";
 	}
 }
 
@@ -152,7 +152,7 @@ foreach my $line  (@skeleton) {
 	} elsif ($line =~ /HAnimJoint/) {
 		$line =~ s/^[ \t][ \t]*//g;
 		$line =~ s/[ \t][ \t]*$//g;
-		print STDERR "Couldn't match $line in centers.pl skeleton loop, not defining a center\n";
+		print STDERR "Couldn't match $line in Newcenters.pl skeleton loop, not defining a center\n";
 	} elsif ($line =~ /rotation/) {
 		#$line = "";
 	} elsif ($line =~ /translation/) {
