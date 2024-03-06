@@ -16,7 +16,7 @@ while(<STDIN>) {
 	$buffer .= $_;
 }
 
-$buffer =~ /[^e]Coordinate[ \r\t\n]*{[ \r\t\n]*point \[(( |\n|\r|[^\]])*)\]/;  # grab points between [ ] across multiple lines
+$buffer =~ /skinCoord.*[^e]Coordinate[ \r\t\n]*{[ \r\t\n]*point \[(( |\n|\r|[^}\]])*)\]/;  # grab points between [ ] across multiple lines
 my $point = $1;
 $point =~ s/^[ \t\n\r]*//;
 $point =~ s/^[ \t]*(.*)\r$/$1\n/g;  # skip leading spaces then remove comment

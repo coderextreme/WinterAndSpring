@@ -5,6 +5,8 @@ export IFS=$'\n\t'
 export VERSION=8
 # Change where zips are found
 export DOWNLOADS="C:/Users/john/Downloads"
+export X3DJSONLD="C:/Users/john/X3DJSONLD/src/main"
+export VIEW3DSCENE="C:/Users/john/Downloads/view3dscene-4.3.0-win64-x86_64/view3dscene"
 
 # zip is copyed to input folder, then unpacked
 #export ZIPNAME="lily RV6_IPOSE.zip"
@@ -77,6 +79,7 @@ bash "SubProcess${VERSION}.sh" # run the drive script for Tufani
 export CHARACTER=Lily  # name of character
 export TEMPLATE="${PROCESSDIR}/${CHARACTER}${VERSION}.x3dv"   # note, no boxes
 export JOINTOUTPUT="${PROCESSDIR}/${CHARACTER}${VERSION}Jointed.x3dv"  # preliminary joint output
+export POSTZAPBOXOUTPUT="${PROCESSDIR}/${CHARACTER}${VERSION}PostZap.x3dv" # after zaping boxes
 export MIDCENTEROUTPUT="${PROCESSDIR}/${CHARACTER}${VERSION}Midcenter.x3dv"  # preliminary center output
 export CENTEROUTPUT="${PROCESSDIR}/${CHARACTER}${VERSION}Center.x3dv"  # preliminary center output
 export BOXOUTPUT="${PROCESSDIR}/${CHARACTER}${VERSION}Boxed.x3dv"  # preliminary boxed output
@@ -97,6 +100,7 @@ bash "SubProcess${VERSION}.sh" # run the drive script for Lily
 export CHARACTER=Leif # name of character
 export TEMPLATE="${PROCESSDIR}/${CHARACTER}${VERSION}.x3dv"   # note, no boxes
 export JOINTOUTPUT="${PROCESSDIR}/${CHARACTER}${VERSION}Jointed.x3dv"  # preliminary joint output
+export POSTZAPBOXOUTPUT="${PROCESSDIR}/${CHARACTER}${VERSION}PostZap.x3dv" # after zaping boxes
 export MIDCENTEROUTPUT="${PROCESSDIR}/${CHARACTER}${VERSION}Midcenter.x3dv"  # preliminary center output
 export CENTEROUTPUT="${PROCESSDIR}/${CHARACTER}${VERSION}Center.x3dv"  # preliminary center output
 export BOXOUTPUT="${PROCESSDIR}/${CHARACTER}${VERSION}Boxed.x3dv"  # preliminary boxed output

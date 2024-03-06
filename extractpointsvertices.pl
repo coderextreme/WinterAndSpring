@@ -29,7 +29,7 @@ while(<OLDSKEL>) {
 my $points = "";
 my $triangles = "";
 
-if ($skeleton =~ /[^e]Coordinate { point \[((\n|\r|[^\]])*)\]/) {
+if ($skeleton =~ /skinCoord.*[^e]Coordinate { point \[((\n|\r|[^}\]])*)\]/) {
 	$points = $1;
 	print POINTS $points;
 
@@ -46,11 +46,11 @@ if ($skeleton =~ /[^e]Coordinate { point \[((\n|\r|[^\]])*)\]/) {
 	}
 	print STDERR "Found $i skin vertices.  Written to $ARGV[4]\n";
 } else {
-	print STDERR "No skin.  Need pattern /Skin Coord Coordinate { point \[((\n|\r|[^\]])*)\]/ for points\n";
+	print STDERR "No skin.  Need pattern skinCoord [^e]Coordinate { point \[((\n|\r|[^}\]])*)\]/ for points\n";
 }
-while ($skeleton =~ /coord Coordinate { point \[((\n|\r|[^\]])*)\] } coordIndex \[/) {
-	$skeleton =~ s/coord Coordinate { point \[((\n|\r|[^\]])*)\] } coordIndex \[//g;
-	print STDERR "Patttern /coord Coordinate { point \[((\n|\r|[^\]])*)\] } coordIndex \[/ is not a valid skin, continuing\n";
+while ($skeleton =~ /skinCoord.*[^e]Coordinate { point \[((\n|\r|[^}\]])*)\] }/) {
+	$skeleton =~ s/skinCoord.*[^e]Coordinate { point \[((\n|\r|[^}\]])*)\] }//g;
+	print STDERR "Patttern /skinCoord [^e]Coordinate { point \[((\n|\r|[^}\]])*)\] }/ is not a valid skin, continuing\n";
 }
 if ($skeleton =~ /([ \t])coordIndex \[((\n|\r|[^\]])*)\]/) {
 	$triangles = $2;

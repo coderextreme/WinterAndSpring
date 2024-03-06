@@ -91,7 +91,7 @@ my $pointcount = @newpoints / 3;
 # We don't do TextureCoordinate yet
 $skeleton =~ s/IndexedTriangleSet/IndexedFaceSet/;  # grab texturets between [ ] across multiple lines
 $skeleton =~ s/(TextureCoordinate[ \r\t\n]*{[ \r\t\n]*)point \[((\n|\r|[^\]])*)\]/$1point [ $uv ] # texture count is $texturecount\r\n/;  # grab texturets between [ ] across multiple lines
-$skeleton =~ s/([^e]Coordinate[ \r\t\n]*{[ \r\t\n]*)point \[((\n|\r|[^\]])*)\]/$1point [ $newpoints ] # point count is $pointcount\r\n/;  # grab points between [ ] across multiple lines
+$skeleton =~ s/(skinCoord.*[^e]Coordinate[ \r\t\n]*{[ \r\t\n]*)point \[((\n|\r|[^}\]])*)\]/$1point [ $newpoints ] # point count is $pointcount\r\n/;  # grab points between [ ] across multiple lines
 $skeleton =~ s/([ \t])coordIndex \[((\n|\r|[^\]])*)\]/$1coordIndex [ $newtriangles ] # triangle count is $trianglecount\r\n/;  # grab points betwen [ ] across multiple lines
 $skeleton =~ s/texCoordIndex \[((\n|\r|[^\]])*)\]/texCoordIndex [ $tci ] # triangle count is $texturecount\r\n/;  # grab points betwen [ ] across multiple lines
 #$skeleton =~ s/texCoordIndex \[((\n|\r|[^\]])*)\]/texCoordIndex [ $newtriangles ] # triangle count is $trianglecount\r\n/;  # grab points betwen [ ] across multiple lines

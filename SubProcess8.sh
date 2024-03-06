@@ -114,22 +114,15 @@ perl replacejoints.pl < "$TEMPLATE" | sed -e "s/IMAGE.png/${IMAGE}/" > "$JOINTOU
 exit_on_failure $? "Couldn't create ${JOINTOUTPUT} using perl replacejoints.pl < $TEMPLATE | sed -e s/IMAGE.png/${IMAGE}/ > $JOINTOUTPUT"
 # perl haveSkeletonAddZeroCenters.pl < "$JOINTOUTPUT" | perl centers.pl "${CENTERS}" > "$CENTEROUTPUT"
 # exit_on_failure $? "Couldn't create ${CENTEROUTPUT} using perl centers.pl ${CENTERS} < ${JOINTOUTPUT} > ${CENTEROUTPUT}"
-#cp  "$JOINTOUTPUT" "$MIDCENTEROUTPUT"
-#exit_on_failure $? "Couldn't cp  $JOINTOUTPUT $MIDCENTEROUTPUT"
 
 perl haveSkeletonZapBoxes.pl < "$JOINTOUTPUT" > "$POSTZAPBOXOUTPUT"
 exit_on_failure $? "Couldn't perl haveSkeletonZapBoxes.pl < $JOINTOUTPUT > $POSTZAPBOXOUTPUT"
 
 perl haveSkeletonZapCenters.pl < "$POSTZAPBOXOUTPUT" > "$MIDCENTEROUTPUT"
-exit_on_failure $? "Couldn't perl haveSkeletonAddZeroCenters.pl < $POSTZAPBOXOUTPUT > $MIDCENTEROUTPUT"
+exit_on_failure $? "Couldn't perl haveSkeletonZapCenters.pl < $POSTZAPBOXOUTPUT > $MIDCENTEROUTPUT"
 
 perl Newcenters.pl "${CENTERS}" < "$MIDCENTEROUTPUT" > "$CENTEROUTPUT"
 exit_on_failure $? "Couldn't create ${CENTEROUTPUT} using perl centers.pl ${CENTERS} < ${MIDCENTEROUTPUT} > ${CENTEROUTPUT}"
-
-#cp  "$MIDCENTEROUTPUT" "$CENTEROUTPUT"
-#exit_on_failure $? "Couldn't cp  $MIDCENTEROUTPUT $CENTEROUTPUT"
-#perl centersFromMaya1k.pl "${CENTERS}" "$MIDCENTEROUTPUT" < "$MIDCENTEROUTPUT" >  "$CENTEROUTPUT"
-#exit_on_failure $? "Couldn't add centers to "$MIDCENTEROUTPUT" to create ${CENTEROUTPUT}"
 
 #perl SkeletonParseLine.pl "$MIDCENTEROUTPUT" "${WEIGHTS}" "${CENTERS}" | sed -e "s/IMAGE.png/${IMAGE}/" > "${REVISEDOUTPUT}"
 #exit_on_failure $? "Couldn't create ${REVISEDOUTPUT} using perl SkeletonParseLine.pl ${CENTEROUTPUT} ${WEIGHTS} ${CENTERS}"
@@ -184,7 +177,7 @@ echo "If you see output above, there's bad info (possibly very large numbers) in
 echo "if you see negative values below, then you need to update $TEXTURES.  All values should be positive"
 grep -e - "$TEXTURES" 
 
-tail +2 "$TEXTURES" | sed -n -e 's/^\([0-9][0-9]*\)\t\([0-9\.][0-9\.]*\)\t\([0-9\.][0-9\.]*\)\t\([0-9\.][0-9\.]*\)\t\([0-9\.][0-9\.]*\)\t\([0-9\.][0-9\.]*\)\t\([0-9\.][0-9\.]*\)\t\([0-9\.][0-9\.]*\)\t\([0-9\.][0-9\.]*\)\t\([0-9\.][0-9\.]*\)\t/\1 \2 \3 \5 \6 \8 \9/p' > "${PROCESSDIR}/textures.txt"
+tail +2 "$TEXTURES" | sed -n -e 's/^\([0-9][0-9]*\)\t\([-0-9\.][0-9\.]*\)\t\([-0-9\.][0-9\.]*\)\t\([-0-9\.][0-9\.]*\)\t\([-0-9\.][0-9\.]*\)\t\([-0-9\.][0-9\.]*\)\t\([-0-9\.][0-9\.]*\)\t\([-0-9\.][0-9\.]*\)\t\([-0-9\.][0-9\.]*\)\t\([-0-9\.][0-9\.]*\)\t/\1 \2 \3 \5 \6 \8 \9/p' > "${PROCESSDIR}/textures.txt"
 #tail +2 "$TEXTURES" | sed -n -e 's/^vt \([0-9\.][0-9\.]*\) \([0-9\.][0-9\.]*\)/\1 \2/p' > "${PROCESSDIR}/textures.txt"
 exit_on_failure $? "Couldn't filter $TEXTURES} to create  ${PROCESSDIR}/textures.txt"
 
@@ -194,7 +187,7 @@ exit_on_failure $? "Couldn't filter $TEXTURES} to create  ${PROCESSDIR}/textures
 # collect triangles and add -1 to the end
 tail +2 "$TRIANGLES" | sed -e 's/\r//g' -e 's/\t$//' -e 's/[^\t]*\t\([-0-9]*\)\t\([-0-9]*\)\t\([-0-9]*\)$/\1 \2 \3 -1/' | tee ${PROCESSDIR}/debugTriangles.txt > "$PROCESSDIR"/triangles.txt
 exit_on_failure $? "Couldn't filter ${TRIANGLES} to create  ${PROCESSDIR}/triangles.txt"
-echo "cp $REVISEDOUTPUT $FINAL"
+#echo "cp $REVISEDOUTPUT $FINAL"
 #cp "$REVISEDOUTPUT" "$FINAL" 
 #exit_on_failure $? "Couldn't copy from $REVISEDOUTPUT to ${FINAL}"
 perl replacepointsvertices.pl "$REVISEDOUTPUT" "$FINAL" "$PROCESSDIR"/points.txt  "$PROCESSDIR"/triangles.txt "$PROCESSDIR"/textures.txt
@@ -275,3 +268,14 @@ perl SkeletonParseLineValidate.pl "${FINAL}" "${SKELETONWEIGHTSDIR}" "$MAPPINGFI
 dos2unix "${SKELETONWEIGHTSDIR}"/*_weights.txt 
 exit_on_failure $? "Couldn't convert weights files in ${SKELETONWEIGHTSDIR}/*_weights.txt"
 echo "Final is ${FINAL}"
+
+"${VIEW3DSCENE}/tovrmlx3d.exe" --encoding=xml "${FINAL}" > "${X3DJSONLD}/data/${CHARACTER}${VERSION}Final.x3d"  # final XML output
+
+pushd "${X3DJSONLD}/shell"
+bash several.sh "../data/${CHARACTER}${VERSION}Final.x3d"
+popd
+pushd "${X3DJSONLD}/graaljs"
+bash reorient.sh "net/coderextreme/data/${CHARACTER}${VERSION}Final.js"
+popd
+cp "${X3DJSONLD}/graaljs/reorient.x3d" "${OUTPUTDIR}/${CHARACTER}${VERSION}Reorient.x3d"
+echo "${VIEW3DSCENE}/view3dscene.exe" "${OUTPUTDIR}/${CHARACTER}${VERSION}Reorient.x3d"

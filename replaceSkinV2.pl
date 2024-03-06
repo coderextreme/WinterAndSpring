@@ -29,8 +29,8 @@ my $ci = "";
 print STDERR "Extracting $ARGV[0]\n";
 $skin =~ /geometry IndexedFaceSet(.|\n)+texCoord([^I]|\n)+TextureCoordinate \{.*point[^\[]*\[([^\]]*)\]/;
 $tcpoint = $3;
-$skin =~ /geometry IndexedFaceSet(.|\n)+coord(.|\n)+[^e]Coordinate \{.*point[^\[]*\[([^\]]*)\]/;
-$cpoint = $3;
+$skin =~ /skinCoord.+[^e]Coordinate \{.*point[^\[]*\[([^}\]]*)\]/;
+$cpoint = $1;
 $skin =~ /geometry IndexedFaceSet(.|\n)+coordIndex[^\[]*\[([^\]]*)\]/;
 $ci = $2;
 $skin =~ /geometry IndexedFaceSet(.|\n)+texCoordIndex[^\[]*\[([^\]]*)\]/;
@@ -59,7 +59,7 @@ if ($1) {
 } else {
 	print STDERR "Failure on TextureCoordinate point\n";
 }
-$skinless =~ s/(DEF[ \t][ \t]*[^ \t][^ \t]*skin \[(.|\n)(.|\n)*geometry IndexedTriangleSet(.|\n)(.|\n)*coord(.|\n)(.|\n)*[^e]Coordinate \{.*point[^\[]*\[)([^\]]*)\]/$1$cpoint]/;
+$skinless =~ s/(skinCoord.*[^e]Coordinate \{.*point[^}\[]*\[)([^}\]]*)\]/$1$cpoint]/;
 if ($1) {
 	print STDERR "Success on Coordinate point\n";
 } else {

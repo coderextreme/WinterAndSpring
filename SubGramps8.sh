@@ -102,7 +102,7 @@ cat  "$PROCESSDIR"/final.txt
 # This adds boxes
 # cat "${METATEMPLATE}" | perl SkeletonParse.pl | perl -p -e s/Toddler/"${CHARACTER}"/g > "$TEMPLATE"
 # this does not add boxes
-cat "${METATEMPLATE}" | perl -p -e s/MODIFYDATE/"`date +'%d %b %Y'`"/g | perl -p -e s/hanim/"${CHARACTER}"/g | perl -p -e s/TODDLER/"${CHARACTER}${VERSION}"/g > "$TEMPLATE"
+cat "${METATEMPLATE}" | perl -p -e s/MODIFYDATE/"`date +'%d %b %Y'`"/g | perl -p -e s/hanim/"${CHARACTER}"/g | perl -p -e s/Toddler/"${CHARACTER}"/g | perl -p -e s/TODDLER/"${CHARACTER}${VERSION}"/g > "$TEMPLATE"
 exit_on_failure $? "Problems substituting $CHARACTER ${VERSION} ${METATEMPLATE} to $TEMPLATE"
 
 unix2dos "$TEMPLATE"
@@ -118,16 +118,9 @@ exit_on_failure $? "Couldn't create ${JOINTOUTPUT} using perl replacejoints.pl <
 perl haveSkeletonZapBoxes.pl < "$JOINTOUTPUT" > "$POSTZAPBOXOUTPUT"
 exit_on_failure $? "Couldn't perl haveSkeletonZapBoxes.pl < $JOINTOUTPUT > $POSTZAPBOXOUTPUT"
 
-#cp  "$JOINTOUTPUT" "$MIDCENTEROUTPUT"
-#exit_on_failure $? "Couldn't cp  $JOINTOUTPUT $MIDCENTEROUTPUT"
 perl haveSkeletonZapCenters.pl < "$POSTZAPBOXOUTPUT" > "$MIDCENTEROUTPUT"
 exit_on_failure $? "Couldn't perl haveSkeletonZapCenters.pl < $POSTZAPBOXOUTPUT > $MIDCENTEROUTPUT"
 
-perl haveSkeletonZapBoxes.pl < "$JOINTOUTPUT" > "$MIDCENTEROUTPUT"
-exit_on_failure $? "Couldn't perl haveSkeletonZapBoxes.pl < $JOINTOUTPUT > $MIDCENTEROUTPUT"
-
-#cp  "$MIDCENTEROUTPUT" "$CENTEROUTPUT"
-#exit_on_failure $? "Couldn't cp  $MIDCENTEROUTPUT $CENTEROUTPUT"
 perl centersFromMaya1k.pl "${CENTERS}" "$MIDCENTEROUTPUT" < "$MIDCENTEROUTPUT" >  "$CENTEROUTPUT"
 exit_on_failure $? "Couldn't add centers to "$MIDCENTEROUTPUT" to create ${CENTEROUTPUT}"
 
@@ -194,7 +187,7 @@ exit_on_failure $? "Couldn't filter $TEXTURES} to create  ${PROCESSDIR}/textures
 # collect triangles and add -1 to the end
 tail +2 "$TRIANGLES" | sed -e 's/\r//g' -e 's/\t$//' -e 's/[^\t]*\t\([-0-9]*\)\t\([-0-9]*\)\t\([-0-9]*\)$/\1 \2 \3 -1/' | tee ${PROCESSDIR}/debugTriangles.txt > "$PROCESSDIR"/triangles.txt
 exit_on_failure $? "Couldn't filter ${TRIANGLES} to create  ${PROCESSDIR}/triangles.txt"
-echo "cp $REVISEDOUTPUT $FINAL"
+#echo "cp $REVISEDOUTPUT $FINAL"
 #cp "$REVISEDOUTPUT" "$FINAL" 
 #exit_on_failure $? "Couldn't copy from $REVISEDOUTPUT to ${FINAL}"
 perl replacepointsvertices.pl "$REVISEDOUTPUT" "$FINAL" "$PROCESSDIR"/points.txt  "$PROCESSDIR"/triangles.txt "$PROCESSDIR"/textures.txt
@@ -209,7 +202,7 @@ perl substitetimers.pl "${CHARACTER}" > ${PROCESSDIR}/Animations"${CHARACTER}${V
 exit_on_failure $? "Couldn't write ${PROCESSDIR}/Animations${CHARACTER}${VERSION}.txt"
 cat  "${PROCESSDIR}/Animations${CHARACTER}${VERSION}.txt" >> "${FINAL}"
 exit_on_failure $? "Couldn't append ${PROCESSDIR}/Animations${VERSION}.txt to ${FINAL}"
-cat "$ANIMATIONS" | perl -p -e s/Toddler/"${CHARACTER}"/g | sed -e s/"${CHARACTER}"_"${CHARACTER}"/"${CHARACTER}"/g  >> "$FINAL"
+cat "$ANIMATIONS" | perl -p -e s/Toddler/"${CHARACTER}"/g | sed -e s/"${CHARACTER}"_"${CHARACTER}"/"${CHARACTER}"/g >> "$FINAL"
 # cat "$ANIMATIONS" | perl -p -e s/Toddler/"${CHARACTER}"/g | sed -e s/Stop/"${CHARACTER}"_Stop01/g -e s/Default/"${CHARACTER}"_Stop01/g -e s/Stand02/"${CHARACTER}"_Stand02/g -e s/Stand03/"${CHARACTER}"_Stand03/g -e 's/Stand\([^0]\)/'"${CHARACTER}"'_Stand01\1/g' -e s/Pitch/"${CHARACTER}"_Pitch01/g -e s/Roll/"${CHARACTER}"_Roll01/g -e s/Kick/"${CHARACTER}"_Kick01/g -e s/Run/"${CHARACTER}"_Run01/g -e s/Yaw/"${CHARACTER}"_Turn01/g -e s/Jump/"${CHARACTER}"_Jump01/g -e s/Skip/"${CHARACTER}"_Skip01/g -e s/Walk02/"${CHARACTER}"_Walk02/g -e 's/Walk\([^0]\)/'"${CHARACTER}"'_Walk01\1/g' -e s/"${CHARARCTER}"_"${CHARACTER}"/"${CHARACTER}"/g  >> "$FINAL"
 exit_on_failure $? "Couldn't append Common ${ANIMATIONS} to ${FINAL}"
 cat "${TAKES}" >> "$FINAL" 
@@ -275,3 +268,14 @@ perl SkeletonParseLineValidate.pl "${FINAL}" "${SKELETONWEIGHTSDIR}" "$MAPPINGFI
 dos2unix "${SKELETONWEIGHTSDIR}"/*_weights.txt 
 exit_on_failure $? "Couldn't convert weights files in ${SKELETONWEIGHTSDIR}/*_weights.txt"
 echo "Final is ${FINAL}"
+
+"${VIEW3DSCENE}/tovrmlx3d.exe" --encoding=xml "${FINAL}" > "${X3DJSONLD}/data/${CHARACTER}${VERSION}Final.x3d"  # final XML output
+
+pushd "${X3DJSONLD}/shell"
+bash several.sh "../data/${CHARACTER}${VERSION}Final.x3d"
+popd
+pushd "${X3DJSONLD}/graaljs"
+bash reorient.sh "net/coderextreme/data/${CHARACTER}${VERSION}Final.js"
+popd
+cp "${X3DJSONLD}/graaljs/reorient.x3d" "${OUTPUTDIR}/${CHARACTER}${VERSION}Reorient.x3d"
+echo "${VIEW3DSCENE}/view3dscene.exe" "${OUTPUTDIR}/${CHARACTER}${VERSION}Reorient.x3d"
