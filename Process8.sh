@@ -71,7 +71,7 @@ export TAKES="takes.${CHARACTER}.txt"
 export TIMERS="takes.${CHARACTER}.timers.txt"
 export TAKESJSON="takes.json"
 export TIMERS="takes.${CHARACTER}.timers.txt"
-export IMAGE="TufaniAvatarBasecolor.png" # name of texture image, replaces IMAGE in X3DV
+#export IMAGE="TufaniAvatarBasecolor.png" # name of texture image, replaces IMAGE in X3DV
 export IMAGE="TUFANI SKIN 2.png" # name of texture image, replaces IMAGE in X3DV
 bash "SubProcess${VERSION}.sh" # run the drive script for Tufani
 
