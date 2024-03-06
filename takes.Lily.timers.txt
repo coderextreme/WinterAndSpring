@@ -1,0 +1,7 @@
+# DEF Lily_Stand010Timer TimeSensor { cycleInterval 2.25 loop TRUE enabled TRUE } # 0.225 - 0 = 0.225, times 10 is 2.25
+# DEF Lily_Run011Timer TimeSensor { cycleInterval 2.0999999999999996 loop TRUE enabled TRUE } # 0.43499999999999994 - 0.225 = 0.20999999999999996, times 10 is 2.0999999999999996
+# DEF Lily_Turn012Timer TimeSensor { cycleInterval 1.9500000000000002 loop TRUE enabled TRUE } # 0.63 - 0.43499999999999994 = 0.195, times 10 is 1.9500000000000002
+# DEF Lily_Walk013Timer TimeSensor { cycleInterval 1 loop TRUE enabled TRUE } # 0.73 - 0.63 = 0.1, times 10 is 1
+# DEF Lily_Skip014Timer TimeSensor { cycleInterval 1.7000000000000002 loop TRUE enabled TRUE } # 0.9 - 0.73 = 0.17, times 10 is 1.7000000000000002
+# DEF Lily_Stand015Timer TimeSensor { cycleInterval 1 loop TRUE enabled TRUE } # 1 - 0.9 = 0.1, times 10 is 1
+# DEF Lily_Stand016Timer TimeSensor { cycleInterval 0.01 loop TRUE enabled TRUE } # 0 - 1 = 0.001, times 10 is 0.01

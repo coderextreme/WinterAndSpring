@@ -1,0 +1,196 @@
+DEF Gramps_Stand010BooleanSequencer BooleanSequencer {
+	key [ 0 0.11 0.22 0.55 0.63 0.73 0.85 1  ]
+	keyValue [ TRUE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE ]
+	# [ Gramps_Stand01 Gramps_Walk01 Gramps_Stand02 Gramps_Turn01 Gramps_Walk01 Gramps_Walk02 Gramps_Skip01 Gramps_Stand03 Gramps_Stand03 ]
+}
+DEF Gramps_Stand010SPLITTERBooleanFilter BooleanFilter { }
+DEF Gramps_Stand010FINALEBooleanFilter BooleanFilter { }
+DEF Gramps_Stand010NEGATERBooleanFilter BooleanFilter { }
+DEF Gramps_Stand010OffTimeTrigger TimeTrigger { }
+DEF Gramps_Stand010OnTimeTrigger TimeTrigger { }
+ROUTE Gramps_z100sTimer.isActive TO Gramps_Stand010SPLITTERBooleanFilter.set_boolean
+ROUTE Gramps_z100sTimer.fraction_changed TO Gramps_Stand010BooleanSequencer.set_fraction
+ROUTE Gramps_Stand010BooleanSequencer.value_changed TO Gramps_Stand010SPLITTERBooleanFilter.set_boolean
+ROUTE Gramps_Stand010SPLITTERBooleanFilter.inputTrue TO Gramps_Stand010OnTimeTrigger.set_boolean
+ROUTE Gramps_Stand010SPLITTERBooleanFilter.inputFalse TO Gramps_Stand010OffTimeTrigger.set_boolean
+ROUTE Gramps_Stand010SPLITTERBooleanFilter.inputTrue TO Gramps_Stand010Timer.set_enabled
+ROUTE Gramps_Stand010SPLITTERBooleanFilter.inputFalse TO Gramps_Stand010Timer.set_enabled
+ROUTE Gramps_Stand010OffTimeTrigger.triggerTime TO Gramps_Stand010Timer.set_stopTime
+ROUTE Gramps_Stand010OnTimeTrigger.triggerTime TO Gramps_Stand010Timer.set_startTime
+DEF Gramps_Walk011BooleanSequencer BooleanSequencer {
+	key [ 0 0.11 0.22 0.55 0.63 0.73 0.85 1  ]
+	keyValue [ FALSE TRUE FALSE FALSE FALSE FALSE FALSE FALSE FALSE ]
+	# [ Gramps_Stand01 Gramps_Walk01 Gramps_Stand02 Gramps_Turn01 Gramps_Walk01 Gramps_Walk02 Gramps_Skip01 Gramps_Stand03 Gramps_Stand03 ]
+}
+DEF Gramps_Walk011SPLITTERBooleanFilter BooleanFilter { }
+DEF Gramps_Walk011FINALEBooleanFilter BooleanFilter { }
+DEF Gramps_Walk011NEGATERBooleanFilter BooleanFilter { }
+DEF Gramps_Walk011OffTimeTrigger TimeTrigger { }
+DEF Gramps_Walk011OnTimeTrigger TimeTrigger { }
+ROUTE Gramps_z100sTimer.fraction_changed TO Gramps_Walk011BooleanSequencer.set_fraction
+ROUTE Gramps_Walk011BooleanSequencer.value_changed TO Gramps_Walk011SPLITTERBooleanFilter.set_boolean
+ROUTE Gramps_Walk011SPLITTERBooleanFilter.inputTrue TO Gramps_Walk011OnTimeTrigger.set_boolean
+ROUTE Gramps_Walk011SPLITTERBooleanFilter.inputFalse TO Gramps_Walk011OffTimeTrigger.set_boolean
+ROUTE Gramps_Walk011SPLITTERBooleanFilter.inputTrue TO Gramps_Walk011Timer.set_enabled
+ROUTE Gramps_Walk011SPLITTERBooleanFilter.inputFalse TO Gramps_Walk011Timer.set_enabled
+ROUTE Gramps_Walk011OffTimeTrigger.triggerTime TO Gramps_Walk011Timer.set_stopTime
+ROUTE Gramps_Walk011OnTimeTrigger.triggerTime TO Gramps_Walk011Timer.set_startTime
+DEF Gramps_Stand022BooleanSequencer BooleanSequencer {
+	key [ 0 0.11 0.22 0.55 0.63 0.73 0.85 1  ]
+	keyValue [ FALSE FALSE TRUE FALSE FALSE FALSE FALSE FALSE FALSE ]
+	# [ Gramps_Stand01 Gramps_Walk01 Gramps_Stand02 Gramps_Turn01 Gramps_Walk01 Gramps_Walk02 Gramps_Skip01 Gramps_Stand03 Gramps_Stand03 ]
+}
+DEF Gramps_Stand022SPLITTERBooleanFilter BooleanFilter { }
+DEF Gramps_Stand022FINALEBooleanFilter BooleanFilter { }
+DEF Gramps_Stand022NEGATERBooleanFilter BooleanFilter { }
+DEF Gramps_Stand022OffTimeTrigger TimeTrigger { }
+DEF Gramps_Stand022OnTimeTrigger TimeTrigger { }
+ROUTE Gramps_z100sTimer.fraction_changed TO Gramps_Stand022BooleanSequencer.set_fraction
+ROUTE Gramps_Stand022BooleanSequencer.value_changed TO Gramps_Stand022SPLITTERBooleanFilter.set_boolean
+ROUTE Gramps_Stand022SPLITTERBooleanFilter.inputTrue TO Gramps_Stand022OnTimeTrigger.set_boolean
+ROUTE Gramps_Stand022SPLITTERBooleanFilter.inputFalse TO Gramps_Stand022OffTimeTrigger.set_boolean
+ROUTE Gramps_Stand022SPLITTERBooleanFilter.inputTrue TO Gramps_Stand022Timer.set_enabled
+ROUTE Gramps_Stand022SPLITTERBooleanFilter.inputFalse TO Gramps_Stand022Timer.set_enabled
+ROUTE Gramps_Stand022OffTimeTrigger.triggerTime TO Gramps_Stand022Timer.set_stopTime
+ROUTE Gramps_Stand022OnTimeTrigger.triggerTime TO Gramps_Stand022Timer.set_startTime
+DEF Gramps_Turn013BooleanSequencer BooleanSequencer {
+	key [ 0 0.11 0.22 0.55 0.63 0.73 0.85 1  ]
+	keyValue [ FALSE FALSE FALSE TRUE FALSE FALSE FALSE FALSE FALSE ]
+	# [ Gramps_Stand01 Gramps_Walk01 Gramps_Stand02 Gramps_Turn01 Gramps_Walk01 Gramps_Walk02 Gramps_Skip01 Gramps_Stand03 Gramps_Stand03 ]
+}
+DEF Gramps_Turn013SPLITTERBooleanFilter BooleanFilter { }
+DEF Gramps_Turn013FINALEBooleanFilter BooleanFilter { }
+DEF Gramps_Turn013NEGATERBooleanFilter BooleanFilter { }
+DEF Gramps_Turn013OffTimeTrigger TimeTrigger { }
+DEF Gramps_Turn013OnTimeTrigger TimeTrigger { }
+ROUTE Gramps_z100sTimer.fraction_changed TO Gramps_Turn013BooleanSequencer.set_fraction
+ROUTE Gramps_Turn013BooleanSequencer.value_changed TO Gramps_Turn013SPLITTERBooleanFilter.set_boolean
+ROUTE Gramps_Turn013SPLITTERBooleanFilter.inputTrue TO Gramps_Turn013OnTimeTrigger.set_boolean
+ROUTE Gramps_Turn013SPLITTERBooleanFilter.inputFalse TO Gramps_Turn013OffTimeTrigger.set_boolean
+ROUTE Gramps_Turn013SPLITTERBooleanFilter.inputTrue TO Gramps_Turn013Timer.set_enabled
+ROUTE Gramps_Turn013SPLITTERBooleanFilter.inputFalse TO Gramps_Turn013Timer.set_enabled
+ROUTE Gramps_Turn013OffTimeTrigger.triggerTime TO Gramps_Turn013Timer.set_stopTime
+ROUTE Gramps_Turn013OnTimeTrigger.triggerTime TO Gramps_Turn013Timer.set_startTime
+DEF Gramps_Walk014BooleanSequencer BooleanSequencer {
+	key [ 0 0.11 0.22 0.55 0.63 0.73 0.85 1  ]
+	keyValue [ FALSE FALSE FALSE FALSE TRUE FALSE FALSE FALSE FALSE ]
+	# [ Gramps_Stand01 Gramps_Walk01 Gramps_Stand02 Gramps_Turn01 Gramps_Walk01 Gramps_Walk02 Gramps_Skip01 Gramps_Stand03 Gramps_Stand03 ]
+}
+DEF Gramps_Walk014SPLITTERBooleanFilter BooleanFilter { }
+DEF Gramps_Walk014FINALEBooleanFilter BooleanFilter { }
+DEF Gramps_Walk014NEGATERBooleanFilter BooleanFilter { }
+DEF Gramps_Walk014OffTimeTrigger TimeTrigger { }
+DEF Gramps_Walk014OnTimeTrigger TimeTrigger { }
+ROUTE Gramps_z100sTimer.fraction_changed TO Gramps_Walk014BooleanSequencer.set_fraction
+ROUTE Gramps_Walk014BooleanSequencer.value_changed TO Gramps_Walk014SPLITTERBooleanFilter.set_boolean
+ROUTE Gramps_Walk014SPLITTERBooleanFilter.inputTrue TO Gramps_Walk014OnTimeTrigger.set_boolean
+ROUTE Gramps_Walk014SPLITTERBooleanFilter.inputFalse TO Gramps_Walk014OffTimeTrigger.set_boolean
+ROUTE Gramps_Walk014SPLITTERBooleanFilter.inputTrue TO Gramps_Walk014Timer.set_enabled
+ROUTE Gramps_Walk014SPLITTERBooleanFilter.inputFalse TO Gramps_Walk014Timer.set_enabled
+ROUTE Gramps_Walk014OffTimeTrigger.triggerTime TO Gramps_Walk014Timer.set_stopTime
+ROUTE Gramps_Walk014OnTimeTrigger.triggerTime TO Gramps_Walk014Timer.set_startTime
+DEF Gramps_Walk025BooleanSequencer BooleanSequencer {
+	key [ 0 0.11 0.22 0.55 0.63 0.73 0.85 1  ]
+	keyValue [ FALSE FALSE FALSE FALSE FALSE TRUE FALSE FALSE FALSE ]
+	# [ Gramps_Stand01 Gramps_Walk01 Gramps_Stand02 Gramps_Turn01 Gramps_Walk01 Gramps_Walk02 Gramps_Skip01 Gramps_Stand03 Gramps_Stand03 ]
+}
+DEF Gramps_Walk025SPLITTERBooleanFilter BooleanFilter { }
+DEF Gramps_Walk025FINALEBooleanFilter BooleanFilter { }
+DEF Gramps_Walk025NEGATERBooleanFilter BooleanFilter { }
+DEF Gramps_Walk025OffTimeTrigger TimeTrigger { }
+DEF Gramps_Walk025OnTimeTrigger TimeTrigger { }
+ROUTE Gramps_z100sTimer.fraction_changed TO Gramps_Walk025BooleanSequencer.set_fraction
+ROUTE Gramps_Walk025BooleanSequencer.value_changed TO Gramps_Walk025SPLITTERBooleanFilter.set_boolean
+ROUTE Gramps_Walk025SPLITTERBooleanFilter.inputTrue TO Gramps_Walk025OnTimeTrigger.set_boolean
+ROUTE Gramps_Walk025SPLITTERBooleanFilter.inputFalse TO Gramps_Walk025OffTimeTrigger.set_boolean
+ROUTE Gramps_Walk025SPLITTERBooleanFilter.inputTrue TO Gramps_Walk025Timer.set_enabled
+ROUTE Gramps_Walk025SPLITTERBooleanFilter.inputFalse TO Gramps_Walk025Timer.set_enabled
+ROUTE Gramps_Walk025OffTimeTrigger.triggerTime TO Gramps_Walk025Timer.set_stopTime
+ROUTE Gramps_Walk025OnTimeTrigger.triggerTime TO Gramps_Walk025Timer.set_startTime
+DEF Gramps_Skip016BooleanSequencer BooleanSequencer {
+	key [ 0 0.11 0.22 0.55 0.63 0.73 0.85 1  ]
+	keyValue [ FALSE FALSE FALSE FALSE FALSE FALSE TRUE FALSE FALSE ]
+	# [ Gramps_Stand01 Gramps_Walk01 Gramps_Stand02 Gramps_Turn01 Gramps_Walk01 Gramps_Walk02 Gramps_Skip01 Gramps_Stand03 Gramps_Stand03 ]
+}
+DEF Gramps_Skip016SPLITTERBooleanFilter BooleanFilter { }
+DEF Gramps_Skip016FINALEBooleanFilter BooleanFilter { }
+DEF Gramps_Skip016NEGATERBooleanFilter BooleanFilter { }
+DEF Gramps_Skip016OffTimeTrigger TimeTrigger { }
+DEF Gramps_Skip016OnTimeTrigger TimeTrigger { }
+ROUTE Gramps_z100sTimer.fraction_changed TO Gramps_Skip016BooleanSequencer.set_fraction
+ROUTE Gramps_Skip016BooleanSequencer.value_changed TO Gramps_Skip016SPLITTERBooleanFilter.set_boolean
+ROUTE Gramps_Skip016SPLITTERBooleanFilter.inputTrue TO Gramps_Skip016OnTimeTrigger.set_boolean
+ROUTE Gramps_Skip016SPLITTERBooleanFilter.inputFalse TO Gramps_Skip016OffTimeTrigger.set_boolean
+ROUTE Gramps_Skip016SPLITTERBooleanFilter.inputTrue TO Gramps_Skip016Timer.set_enabled
+ROUTE Gramps_Skip016SPLITTERBooleanFilter.inputFalse TO Gramps_Skip016Timer.set_enabled
+ROUTE Gramps_Skip016OffTimeTrigger.triggerTime TO Gramps_Skip016Timer.set_stopTime
+ROUTE Gramps_Skip016OnTimeTrigger.triggerTime TO Gramps_Skip016Timer.set_startTime
+DEF Gramps_Stand037BooleanSequencer BooleanSequencer {
+	key [ 0 0.11 0.22 0.55 0.63 0.73 0.85 1  ]
+	keyValue [ FALSE FALSE FALSE FALSE FALSE FALSE FALSE TRUE FALSE ]
+	# [ Gramps_Stand01 Gramps_Walk01 Gramps_Stand02 Gramps_Turn01 Gramps_Walk01 Gramps_Walk02 Gramps_Skip01 Gramps_Stand03 Gramps_Stand03 ]
+}
+DEF Gramps_Stand037SPLITTERBooleanFilter BooleanFilter { }
+DEF Gramps_Stand037FINALEBooleanFilter BooleanFilter { }
+DEF Gramps_Stand037NEGATERBooleanFilter BooleanFilter { }
+DEF Gramps_Stand037OffTimeTrigger TimeTrigger { }
+DEF Gramps_Stand037OnTimeTrigger TimeTrigger { }
+ROUTE Gramps_z100sTimer.fraction_changed TO Gramps_Stand037BooleanSequencer.set_fraction
+ROUTE Gramps_Stand037BooleanSequencer.value_changed TO Gramps_Stand037SPLITTERBooleanFilter.set_boolean
+ROUTE Gramps_Stand037SPLITTERBooleanFilter.inputTrue TO Gramps_Stand037OnTimeTrigger.set_boolean
+ROUTE Gramps_Stand037SPLITTERBooleanFilter.inputFalse TO Gramps_Stand037OffTimeTrigger.set_boolean
+ROUTE Gramps_Stand037SPLITTERBooleanFilter.inputTrue TO Gramps_Stand037Timer.set_enabled
+ROUTE Gramps_Stand037SPLITTERBooleanFilter.inputFalse TO Gramps_Stand037Timer.set_enabled
+ROUTE Gramps_Stand037OffTimeTrigger.triggerTime TO Gramps_Stand037Timer.set_stopTime
+ROUTE Gramps_Stand037OnTimeTrigger.triggerTime TO Gramps_Stand037Timer.set_startTime
+DEF Gramps_Stand038BooleanSequencer BooleanSequencer {
+	key [ 0 0.11 0.22 0.55 0.63 0.73 0.85 1  ]
+	keyValue [ FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE TRUE ]
+	# [ Gramps_Stand01 Gramps_Walk01 Gramps_Stand02 Gramps_Turn01 Gramps_Walk01 Gramps_Walk02 Gramps_Skip01 Gramps_Stand03 Gramps_Stand03 ]
+}
+DEF Gramps_Stand038SPLITTERBooleanFilter BooleanFilter { }
+DEF Gramps_Stand038FINALEBooleanFilter BooleanFilter { }
+DEF Gramps_Stand038NEGATERBooleanFilter BooleanFilter { }
+DEF Gramps_Stand038OffTimeTrigger TimeTrigger { }
+DEF Gramps_Stand038OnTimeTrigger TimeTrigger { }
+ROUTE Gramps_z100sTimer.cycleTime TO Gramps_Stand038Timer.set_stopTime
+ROUTE Gramps_z100sTimer.isActive TO Gramps_Stand038Timer.set_enabled
+DEF Gramps_Stand038FINALETimeTrigger TimeTrigger { }
+ROUTE Gramps_Stand038FINALEBooleanFilter.inputFalse TO Gramps_Stand038FINALETimeTrigger.set_boolean
+ROUTE Gramps_Stand038FINALETimeTrigger.triggerTime TO Gramps_Stand038Timer.set_stopTime
+ROUTE Gramps_z100sTimer.fraction_changed TO Gramps_Stand038BooleanSequencer.set_fraction
+ROUTE Gramps_Stand038BooleanSequencer.value_changed TO Gramps_Stand038SPLITTERBooleanFilter.set_boolean
+ROUTE Gramps_Stand038SPLITTERBooleanFilter.inputTrue TO Gramps_Stand038OnTimeTrigger.set_boolean
+ROUTE Gramps_Stand038SPLITTERBooleanFilter.inputFalse TO Gramps_Stand038OffTimeTrigger.set_boolean
+ROUTE Gramps_Stand038SPLITTERBooleanFilter.inputTrue TO Gramps_Stand038Timer.set_enabled
+ROUTE Gramps_Stand038SPLITTERBooleanFilter.inputFalse TO Gramps_Stand038Timer.set_enabled
+ROUTE Gramps_Stand038OffTimeTrigger.triggerTime TO Gramps_Stand038Timer.set_stopTime
+ROUTE Gramps_Stand038OnTimeTrigger.triggerTime TO Gramps_Stand038Timer.set_startTime
+###########################################################################################
+ROUTE Gramps_Stand010Timer.stopTime TO Gramps_Walk011Timer.set_startTime
+ROUTE Gramps_Stand010Timer.isActive TO Gramps_Walk011NEGATERBooleanFilter.set_boolean
+ROUTE Gramps_Walk011NEGATERBooleanFilter.inputNegate TO Gramps_Stand010BooleanSequencer.next
+ROUTE Gramps_Walk011Timer.stopTime TO Gramps_Stand022Timer.set_startTime
+ROUTE Gramps_Walk011Timer.isActive TO Gramps_Stand022NEGATERBooleanFilter.set_boolean
+ROUTE Gramps_Stand022NEGATERBooleanFilter.inputNegate TO Gramps_Walk011BooleanSequencer.next
+ROUTE Gramps_Stand022Timer.stopTime TO Gramps_Turn013Timer.set_startTime
+ROUTE Gramps_Stand022Timer.isActive TO Gramps_Turn013NEGATERBooleanFilter.set_boolean
+ROUTE Gramps_Turn013NEGATERBooleanFilter.inputNegate TO Gramps_Stand022BooleanSequencer.next
+ROUTE Gramps_Turn013Timer.stopTime TO Gramps_Walk014Timer.set_startTime
+ROUTE Gramps_Turn013Timer.isActive TO Gramps_Walk014NEGATERBooleanFilter.set_boolean
+ROUTE Gramps_Walk014NEGATERBooleanFilter.inputNegate TO Gramps_Turn013BooleanSequencer.next
+ROUTE Gramps_Walk014Timer.stopTime TO Gramps_Walk025Timer.set_startTime
+ROUTE Gramps_Walk014Timer.isActive TO Gramps_Walk025NEGATERBooleanFilter.set_boolean
+ROUTE Gramps_Walk025NEGATERBooleanFilter.inputNegate TO Gramps_Walk014BooleanSequencer.next
+ROUTE Gramps_Walk025Timer.stopTime TO Gramps_Skip016Timer.set_startTime
+ROUTE Gramps_Walk025Timer.isActive TO Gramps_Skip016NEGATERBooleanFilter.set_boolean
+ROUTE Gramps_Skip016NEGATERBooleanFilter.inputNegate TO Gramps_Walk025BooleanSequencer.next
+ROUTE Gramps_Skip016Timer.stopTime TO Gramps_Stand037Timer.set_startTime
+ROUTE Gramps_Skip016Timer.isActive TO Gramps_Stand037NEGATERBooleanFilter.set_boolean
+ROUTE Gramps_Stand037NEGATERBooleanFilter.inputNegate TO Gramps_Skip016BooleanSequencer.next
+ROUTE Gramps_Stand037Timer.stopTime TO Gramps_Stand038Timer.set_startTime
+ROUTE Gramps_Stand037Timer.isActive TO Gramps_Stand038NEGATERBooleanFilter.set_boolean
+ROUTE Gramps_Stand038NEGATERBooleanFilter.inputNegate TO Gramps_Stand037BooleanSequencer.next
+ROUTE Gramps_Stand038Timer.stopTime TO Gramps_Stand010Timer.set_startTime
+ROUTE Gramps_Stand038Timer.isActive TO Gramps_Stand010NEGATERBooleanFilter.set_boolean
+ROUTE Gramps_Stand010NEGATERBooleanFilter.inputNegate TO Gramps_Stand038BooleanSequencer.next

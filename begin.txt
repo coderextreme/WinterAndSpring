@@ -31,6 +31,16 @@ takes.pl -- produces a report from main stage
 takes.text.pl -- produces a test 
 tohtml.pl -- produces a table from main stage
 
+centersFromMaya1k.pl -- add centers from Maya1k
+haveSkeletonZapBoxes.pl -- get rid of Transforms for Boxes
+haveSkeletonZapCenters.pl -- remove centers before readding
+moveupchildren.pl -- replace children with skeleton and delete a few lines
+Newcenters.pl -- new centers adding code
+replacescale.pl -- replace scale everywhere
+replaceSkin.pl -- replace skin in one model with skin in another
+substitetimers.pl -- make timers for each character
+
 convertJsonToCenters.js -- convert skeleton in JSON to Centers, applying transforms (incomplete)
 convertTransformsToCenters.js -- convert Transforms in VRML to centers file
 matrix.js -- matrix code
+takes.js -- processes takes.json.* and produces animation chaining

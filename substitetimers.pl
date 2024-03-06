@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 #
-# ARGV -- list of characters to substitute
+# ARGV -- list of characters to substitute Timer for, to make a timer for each character
 
 foreach my $character (@ARGV) {
 	open (TIMERS, "<takes.$character.timers.txt") or die "ls of takes.$character.timers.txt failed!\n";

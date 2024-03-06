@@ -1,0 +1,7 @@
+# DEF Leif_Stand010Timer TimeSensor { cycleInterval 2.23 loop TRUE enabled TRUE } # 0.223 - 0 = 0.223, times 10 is 2.23
+# DEF Leif_Run011Timer TimeSensor { cycleInterval 2.1 loop TRUE enabled TRUE } # 0.433 - 0.223 = 0.21000000000000002, times 10 is 2.1
+# DEF Leif_Turn012Timer TimeSensor { cycleInterval 1.9699999999999998 loop TRUE enabled TRUE } # 0.63 - 0.433 = 0.19699999999999998, times 10 is 1.9699999999999998
+# DEF Leif_Walk013Timer TimeSensor { cycleInterval 1 loop TRUE enabled TRUE } # 0.73 - 0.63 = 0.1, times 10 is 1
+# DEF Leif_Skip014Timer TimeSensor { cycleInterval 1.7000000000000002 loop TRUE enabled TRUE } # 0.9 - 0.73 = 0.17, times 10 is 1.7000000000000002
+# DEF Leif_Stand015Timer TimeSensor { cycleInterval 1 loop TRUE enabled TRUE } # 1 - 0.9 = 0.1, times 10 is 1
+# DEF Leif_Stand016Timer TimeSensor { cycleInterval 0.01 loop TRUE enabled TRUE } # 0 - 1 = 0.001, times 10 is 0.01

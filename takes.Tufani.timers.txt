@@ -1,0 +1,7 @@
+# DEF Tufani_Stand010Timer TimeSensor { cycleInterval 2.27 loop TRUE enabled TRUE } # 0.227 - 0 = 0.227, times 10 is 2.27
+# DEF Tufani_Run011Timer TimeSensor { cycleInterval 2.1 loop TRUE enabled TRUE } # 0.437 - 0.227 = 0.21000000000000002, times 10 is 2.1
+# DEF Tufani_Turn012Timer TimeSensor { cycleInterval 1.9299999999999997 loop TRUE enabled TRUE } # 0.63 - 0.437 = 0.19299999999999998, times 10 is 1.9299999999999997
+# DEF Tufani_Walk013Timer TimeSensor { cycleInterval 1 loop TRUE enabled TRUE } # 0.73 - 0.63 = 0.1, times 10 is 1
+# DEF Tufani_Skip014Timer TimeSensor { cycleInterval 1.7000000000000002 loop TRUE enabled TRUE } # 0.9 - 0.73 = 0.17, times 10 is 1.7000000000000002
+# DEF Tufani_Stand015Timer TimeSensor { cycleInterval 1 loop TRUE enabled TRUE } # 1 - 0.9 = 0.1, times 10 is 1
+# DEF Tufani_Stand016Timer TimeSensor { cycleInterval 0.01 loop TRUE enabled TRUE } # 0 - 1 = 0.001, times 10 is 0.01
