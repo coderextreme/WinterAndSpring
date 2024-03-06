@@ -1,0 +1,143 @@
+DEF RunAnimation Group { children [
+DEF RunTimer TimeSensor { cycleInterval 0.85 loop TRUE enabled FALSE }
+DEF Run_r_metatarsophalangeal_2Pitch OrientationInterpolator { 
+key [ 0, 0.2, 0.4, 0.6, 0.7, 1 ] 
+keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0 ]}
+DEF Run_l_hipRotInterp_Run OrientationInterpolator { 
+key [ 0, 0.2182, 0.4909, 0.7455, 1 ] 
+keyValue [ -0.99 0.033 0.040 -1.42, -0.99 0.1328 0.067 -0.42,  0.99 0.014 0.009 -0.9, -0.99 0.0703 0.05-0.70, -0.99 0.033 0.040-1.42 ] }
+DEF Run_l_kneeRotInterp_Run OrientationInterpolator { 
+key [ 0, 0.2182, 0.4909, 0.7455, 1 ] 
+keyValue [ 1 0 0 -1.01, 1 0 0 -0.426, 1 0 0 -0.705, 1 0 0 -2.179, 1 0 0 -1.01 ] }
+DEF Run_l_talocruralRotInterp_Run OrientationInterpolator { 
+key [ 0, 0.22, 0.30, 0.4, 1 ] 
+keyValue [ 1 0 0 -0.0374, -1 0 0 -0.1037, -1 0 0 -0.4328, 1 0 0 -0.1929, 1 0 0 -0.03574 ] }
+DEF Run_r_hipRotInterp_Run OrientationInterpolator { 
+key [ 0, 0.2545, 0.4909, 0.7091, 1 ] 
+keyValue [ 0.99 -0.014  0.009 -0.9, -0.99 -0.0703 -0.05  -0.70, -0.99 -0.033  0.040 -1.42, -0.99 -0.1328 -0.067 -0.42, 0.99 -0.014  0.009 -0.9, ] }
+DEF Run_r_kneeRotInterp_Run OrientationInterpolator { 
+key [ 0, 0.2545, 0.4909, 0.7091, 1 ] 
+keyValue [ 1 0 0 -0.705, 1 0 0 -2.179, 1 0 0 -1.01, 1 0 0 -0.426, 1 0 0 -0.705 ] }
+DEF Run_r_talocruralRotInterp_Run OrientationInterpolator { 
+key [ 0, 0.4, 0.71, 0.8, 0.82, 1 ] 
+keyValue [ 1 0 0 -0.2323, -1 0 0 -0.07843, -1 0 0 -0.32, -1 0 0 -0.374, -1 0 0 -0.3478, 1 0 0 -0.2323 ] }
+DEF Run_l_shoulderRotInterp_Run OrientationInterpolator { 
+key [ 0, 0.2182, 0.4909, 0.7455, 1 ] 
+keyValue [ 0.99 -0.074 -0.25 -1.5,  0.99 -0.092 -0.44 -0.3, -0.99  0.136 -0.25 -0.85,  0.99 -0.081 -0.38 -0.4,  0.99 -0.074 -0.25 -1.5 ] }
+DEF Run_l_elbowRotInterp_Run OrientationInterpolator { 
+key [ 0, 0.2182, 0.4909, 0.7455, 1 ] 
+keyValue [ -1 0 0 1.85, -0.99 -0.19 0.18 -1.35, -1 0 0 -0.975, -0.99 -0.09 -0.02 -1.55, -1 0 0 -1.85 ] }
+DEF Run_l_radiocarpalRotInterp_Run OrientationInterpolator { 
+key [ 0, 0.25 0.5 0.75 1 ] 
+keyValue [ -0.25 -1.0 0.08 -0.14, 0.25 1.0 0.08 -0.14, 0 0 1 0, -0.25 1.0 0.08 0.14, -0.25 1.0 0.08 -0.14 ] }
+DEF Run_r_shoulderRotInterp_Run OrientationInterpolator { 
+key [ 0, 0.2545, 0.4909, 0.7091, 1 ] 
+keyValue [ -0.99  -0.136 0.25 -0.85, 0.99 0.081 0.38 -0.4, 0.99 0.074 0.25 -1.5, 0.99 0.081 0.38 -0.4, -0.99 -0.136 0.25 -0.85 ] }
+DEF Run_r_elbowRotInterp_Run OrientationInterpolator { 
+key [ 0, 0.2545, 0.4909, 0.7091, 1 ] 
+keyValue [ -1 0 0 -0.975, -0.99 0.09 0.02 -1.55, -1 0 0 -1.85, -0.99 0.19 -0.18 -1.35, -1 0 0 -0.975 ] }
+DEF Run_r_radiocarpalRotInterp_Run OrientationInterpolator { 
+key [ 0, 1 ] 
+keyValue [ -0.917 -0.237 -0.318 -0.214, -0.917 -0.237 -0.3185 -0.214 ] }
+DEF Run_lower_bodyRotInterp_Run OrientationInterpolator { 
+key [ 0, 0.2182, 0.4909, 0.7455, 1 ] 
+keyValue [ 0  -1 0 -0.125, 0 0 1 0, 0  1 0 -0.125, 0 0 1 0, 0 -1 0 -0.125 ] }
+DEF Run_headRotInterp_Run OrientationInterpolator { 
+key [ 0, 0.2545, 0.4909, 0.7091, 1  ] 
+keyValue [ 1 0 0 -0.08, 1 0 0 -0.12, 1 0 0 -0.30, 1 0 0 -0.30, 1 0 0 -0.08 ] }
+DEF Run_neckRotInterp_Run OrientationInterpolator { 
+key [ 0, 0.2545, 0.4909, 0.7091, 1 ] 
+keyValue [ 0.7 0.0 0.0 -0.40, -0.7 -0.7 0.0 -0.40, 0.0 0.0 0.0 -0.40, -0.7 0.7 0.0 -0.40, 0 0 1 0 ] }
+DEF Run_upper_bodyRotInterp_Run OrientationInterpolator { 
+key [ 0, 0.2545, 0.4909, 0.7636, 1 ] 
+keyValue [ 0.97 0.65 0.086 -0.5, 0.9 0.003 -0.02 -0.38, 0.95 -0.68 -0.086 -0.5, 0.9 0.004 -0.025 -0.4, 0.97 0.65 0.086 -0.5 ] }
+DEF Run_whole_bodyRotInterp_Run OrientationInterpolator { 
+key [ 0, 0.25 0.5 0.75 1 ] 
+keyValue [ 1 0 0 -0.06, 1 0 0 -0.167, 1 0 0 -0.06, 1 0 0 -0.168, 1 0 0 -0.06 ] }
+DEF Run_whole_bodyTranInterp_Run PositionInterpolator { 
+key [ 0, 0.22, 0.3, 0.31, 0.5, 0.69, 0.7, 0.78, 1 ] 
+keyValue [ 0 -0.01 -0, 0 -0.037 0, 0 -0.049 0, 0 -0.037 0, 0 -0.01 0, 0 -0.037 0, 0 -0.049 0, 0 -0.037 0, 0 -0.01 0, ] }
+DEF Run_l_sternoclavicularRoll OrientationInterpolator { 
+key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] 
+keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0 ]}
+ # DEF Run_l_acromioclavicularRoll OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0 ]}
+DEF Run_r_sternoclavicularRoll OrientationInterpolator { 
+key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] 
+keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0 ]}
+ # DEF Run_r_acromioclavicularRoll OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0 ]}
+DEF Run_sacroiliacYaw OrientationInterpolator { 
+key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] 
+keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0 ]}
+DEF Run_vl5Yaw OrientationInterpolator { 
+key [ 0, 0.2, 0.4, 0.5, 0.6, 0.8, 1 ] 
+keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0 ]}
+DEF Run_vc6Yaw OrientationInterpolator { 
+key [0, 0.2, 0.4, 0.5, 0.6, 0.8, 1 ] 
+keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0 ]}
+DEF Run_l_carpometacarpal_1Pitch OrientationInterpolator { 
+key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] 
+keyValue [ 0 0 1 0, 1 0 0 -0.25, 1 0 0 -0.7, 1 0 0 -0.27, 1 0 0 -0.2, 0 0 1 0 ]}
+DEF Run_r_carpometacarpal_1Pitch OrientationInterpolator { 
+key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] 
+keyValue [ 1 0 0 0, 1 0 0 -0.25, 1 0 0 -0.7, 1 0 0 -0.27, 1 0 0 -0.2, 0 0 1 0 ]}
+]
+# ex Run_
+ROUTE RunTimer.fraction_changed TO Run_r_talocruralRotInterp_Run.set_fraction
+ROUTE RunTimer.fraction_changed TO Run_r_kneeRotInterp_Run.set_fraction
+ROUTE RunTimer.fraction_changed TO Run_r_hipRotInterp_Run.set_fraction
+ROUTE RunTimer.fraction_changed TO Run_l_talocruralRotInterp_Run.set_fraction
+ROUTE RunTimer.fraction_changed TO Run_l_kneeRotInterp_Run.set_fraction
+ROUTE RunTimer.fraction_changed TO Run_l_hipRotInterp_Run.set_fraction
+ROUTE RunTimer.fraction_changed TO Run_lower_bodyRotInterp_Run.set_fraction
+ROUTE RunTimer.fraction_changed TO Run_r_radiocarpalRotInterp_Run.set_fraction
+ROUTE RunTimer.fraction_changed TO Run_r_elbowRotInterp_Run.set_fraction
+ROUTE RunTimer.fraction_changed TO Run_r_shoulderRotInterp_Run.set_fraction
+ROUTE RunTimer.fraction_changed TO Run_l_radiocarpalRotInterp_Run.set_fraction
+ROUTE RunTimer.fraction_changed TO Run_l_elbowRotInterp_Run.set_fraction
+ROUTE RunTimer.fraction_changed TO Run_l_shoulderRotInterp_Run.set_fraction
+ROUTE RunTimer.fraction_changed TO Run_headRotInterp_Run.set_fraction
+ROUTE RunTimer.fraction_changed TO Run_neckRotInterp_Run.set_fraction
+ROUTE RunTimer.fraction_changed TO Run_upper_bodyRotInterp_Run.set_fraction
+ROUTE RunTimer.fraction_changed TO Run_whole_bodyRotInterp_Run.set_fraction
+ROUTE RunTimer.fraction_changed TO Run_whole_bodyTranInterp_Run.set_fraction
+ROUTE RunTimer.fraction_changed TO Run_l_sternoclavicularRoll.set_fraction 
+ # ROUTE RunTimer.fraction_changed TO Run_l_acromioclavicularRoll.set_fraction 
+ROUTE RunTimer.fraction_changed TO Run_r_sternoclavicularRoll.set_fraction 
+ # ROUTE RunTimer.fraction_changed TO Run_r_acromioclavicularRoll.set_fraction 
+ROUTE RunTimer.fraction_changed TO Run_r_metatarsophalangeal_2Pitch.set_fraction 
+ROUTE RunTimer.fraction_changed TO Run_sacroiliacYaw.set_fraction 
+ROUTE RunTimer.fraction_changed TO Run_vl5Yaw.set_fraction 
+ROUTE RunTimer.fraction_changed TO Run_vc6Yaw.set_fraction 
+ROUTE RunTimer.fraction_changed TO Run_l_carpometacarpal_1Pitch.set_fraction 
+ROUTE RunTimer.fraction_changed TO Run_r_carpometacarpal_1Pitch.set_fraction
+# ex Run_ 
+ROUTE Run_r_talocruralRotInterp_Run.value_changed TO Toddler_r_talocrural.rotation
+ROUTE Run_r_kneeRotInterp_Run.value_changed TO Toddler_r_knee.rotation
+ROUTE Run_r_hipRotInterp_Run.value_changed TO Toddler_r_hip.rotation
+ROUTE Run_l_talocruralRotInterp_Run.value_changed TO Toddler_l_talocrural.rotation
+ROUTE Run_l_kneeRotInterp_Run.value_changed TO Toddler_l_knee.rotation
+ROUTE Run_l_hipRotInterp_Run.value_changed TO Toddler_l_hip.rotation
+ROUTE Run_r_radiocarpalRotInterp_Run.value_changed TO Toddler_r_radiocarpal.rotation
+ROUTE Run_r_elbowRotInterp_Run.value_changed TO Toddler_r_elbow.rotation
+ROUTE Run_r_shoulderRotInterp_Run.value_changed TO Toddler_r_shoulder.rotation
+ROUTE Run_l_radiocarpalRotInterp_Run.value_changed TO Toddler_l_radiocarpal.rotation
+ROUTE Run_l_elbowRotInterp_Run.value_changed TO Toddler_l_elbow.rotation
+ROUTE Run_l_shoulderRotInterp_Run.value_changed TO Toddler_l_shoulder.rotation
+ROUTE Run_lower_bodyRotInterp_Run.value_changed TO Toddler_sacroiliac.rotation
+ROUTE Run_headRotInterp_Run.value_changed TO Toddler_skullbase.rotation
+ROUTE Run_neckRotInterp_Run.value_changed TO Toddler_vc4.rotation
+ # ROUTE Run_upper_bodyRotInterp_Run.value_changed TO Toddler_vl1.rotation
+ROUTE Run_whole_bodyRotInterp_Run.value_changed TO Toddler_humanoid_root.rotation
+ROUTE Run_whole_bodyTranInterp_Run.value_changed TO Toddler_humanoid_root.translation
+ROUTE Run_l_sternoclavicularRoll.value_changed TO Toddler_l_sternoclavicular.rotation
+ # ROUTE Run_l_acromioclavicularRoll.value_changed TO Toddler_l_acromioclavicular.rotation
+ROUTE Run_r_sternoclavicularRoll.value_changed TO Toddler_r_sternoclavicular.rotation
+ # ROUTE Run_r_acromioclavicularRoll.value_changed TO Toddler_r_acromioclavicular.rotation
+ROUTE Run_r_metatarsophalangeal_2Pitch.value_changed TO Toddler_l_metatarsophalangeal_2.rotation 
+ROUTE Run_r_metatarsophalangeal_2Pitch.value_changed TO Toddler_r_metatarsophalangeal_2.rotation 
+ROUTE Run_sacroiliacYaw.value_changed TO Toddler_sacroiliac.rotation 
+ROUTE Run_vl5Yaw.value_changed TO Toddler_vl5.rotation 
+ # ROUTE Run_vc6Yaw.value_changed TO Toddler_vc6.rotation 
+ROUTE Run_l_carpometacarpal_1Pitch.value_changed TO Toddler_l_carpometacarpal_1.rotation
+ROUTE Run_r_carpometacarpal_1Pitch.value_changed TO Toddler_r_carpometacarpal_1.rotation
+}

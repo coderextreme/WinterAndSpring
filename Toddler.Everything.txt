@@ -1,0 +1,143 @@
+#DEF Interface Group { # geometry and touchsensors to select animation
+# children [ 
+#  DEF cordsysfloor Transform { scale 0.175 0.175 0.175 
+#   children [ Inline { url ["JointCoordinateAxes.x3dv"] } ] }
+#  DEF HudProx ProximitySensor { center 0 0 0 size 50 50 50 }
+#  DEF HudXform Transform { 
+#   children [
+#    Transform { translation -0.2 0.15 -0.7 scale 0.02 0.02 0.02
+#     children [
+#      DEF Everything_Text Transform { translation 0 -12.2 0
+#       children [
+#	# DEF EverythingTimer TimeSensor { cycleInterval 30 loop TRUE enabled TRUE }
+#        DEF Everything_Touch TouchSensor {  }
+#        DEF EverythingText Shape {
+#         appearance Appearance { material DEF text_color Material { 
+#          ambientIntensity 1 diffuseColor 0.819 0.521 0.169 specularColor 0.819 0.521 0.169 emissiveColor 0.819 0.521 0.169 } }
+#         geometry Text { string ["Everything"] 
+#          fontStyle FontStyle {
+#            family [ "SANS"  ] 
+#          }
+#         }
+#        }
+#        DEF Everything_Back Shape {
+#         appearance Appearance { material DEF Clear Material { 
+#          ambientIntensity 1 emissiveColor 0 0.5 0 diffuseColor 0 0.5 0 
+#          transparency 0.8 } } 
+#         geometry DEF Backing IndexedFaceSet { 
+#	  creaseAngle 3.141593
+#          coord Coordinate { point [ -0.2 -0.25 -0.01 3.0 -0.25 -0.01 3.0 1 -0.01 -0.2 1 -0.01 ] } coordIndex [ 0 1 2 3 -1 ] }
+#        }
+#       ]
+#      }
+#     ]
+#    }
+#   ]
+#  }
+# ]
+#} 
+#
+#ROUTE HudProx.position_changed TO HudXform.translation
+#ROUTE HudProx.orientation_changed TO HudXform.rotation 
+
+DEF Toddler_z100sTimer TimeSensor { cycleInterval 100 loop FALSE enabled TRUE startTime 1 }
+DEF Toddler_ActivateSensor ProximitySensor { size 1000000 1000000 1000000 }
+ROUTE Toddler_ActivateSensor.enterTime TO Toddler_z100sTimer.startTime
+
+
+#DEF Toddler_humanoid_root_TranslationInterpolator PositionInterpolator {
+#key [ 0 0.09 0.11 0.223 0.43 0.55 0.63 0.73 0.85 0.86 1 ]
+#keyValue [
+#-7.9962 0.400 3.000, #(0) (Toddler_Stand01)
+#-7.9962 0.400 3.000, #(0.09) (Toddler_Stand01)
+#-7.9962 0.400 3.000, #(0.11) (Toddler_Stand01)
+#-7.9962 0.400 3.000, #(0.223) (Toddler_Run01)
+#9.004 0.475 3.4999, #(0.433) (Toddler_Turn01)
+#11.5048 0.475 3.3699, #(0.55) (Toddler_Walk01)
+#16.0038 0.475 7.8699, #(0.63) (Toddler_Walk01)
+#18.5038 0.475 14.8699, #(0.73) (Toddler_Skip01)
+#23.0038 0.475 24.3699, #(0.85) (Toddler_Stand01)
+#23.0038 0.475 24.3699, #(0.86) (Toddler_Stand01)
+#23.0038 0.475 24.3699, #(1) (Toddler_Stand01)
+#]}
+
+#ROUTE Toddler_z100sTimer.fraction_changed TO Toddler_humanoid_root_TranslationInterpolator.set_fraction
+#ROUTE Toddler_humanoid_root_TranslationInterpolator.value_changed TO Toddler_humanoid_root.translation
+
+DEF Toddler_Pitch2Interpolator OrientationInterpolator {   key [   0 0.10 0.16 0.25 0.33 0.38 0.46 0.60 0.69 0.77 0.84 0.90 1 ]   keyValue [   0 0 1 0, 1 0 0 0.8, 0 0 1 0, 1 0 0 2, 0 0 1 0,   1 0 0 0.8, 0 0 1 0, 1 0 0 -0.8, 0 0 1 0, 1 0 0 -2,  0 0 1 0, 0 0 1 0, 0 0 1 0 ] } 
+ROUTE Toddler_z100sTimer.fraction_changed TO Toddler_Pitch012Interpolator.set_fraction
+ROUTE Toddler_z100sTimer.fraction_changed TO Toddler_Pitch2Interpolator.set_fraction
+
+#ROUTE Toddler_Pitch2Interpolator.value_changed TO Toddler_humanoid_root.rotation
+#ROUTE Toddler_Pitch2Interpolator.value_changed TO Toddler_sacroiliac.rotation
+#ROUTE Toddler_Pitch2Interpolator.value_changed TO Toddler_l_hip.rotation
+#ROUTE Toddler_Pitch2Interpolator.value_changed TO Toddler_r_hip.rotation
+#ROUTE Toddler_Pitch2Interpolator.value_changed TO Toddler_l_knee.rotation
+#ROUTE Toddler_Pitch2Interpolator.value_changed TO Toddler_r_knee.rotation
+#ROUTE Toddler_Pitch2Interpolator.value_changed TO Toddler_l_talocrural.rotation
+#ROUTE Toddler_Pitch2Interpolator.value_changed TO Toddler_r_talocrural.rotation
+#ROUTE Toddler_Pitch2Interpolator.value_changed TO Toddler_l_metatarsophalangeal_2.rotation
+#ROUTE Toddler_Pitch2Interpolator.value_changed TO Toddler_r_metatarsophalangeal_2.rotation
+#ROUTE Toddler_Pitch2Interpolator.value_changed TO Toddler_vl2.rotation
+#ROUTE Toddler_Pitch2Interpolator.value_changed TO Toddler_vt11.rotation
+#ROUTE Toddler_Pitch2Interpolator.value_changed TO Toddler_vt5.rotation
+#ROUTE Toddler_Pitch2Interpolator.value_changed TO Toddler_vc4.rotation
+#ROUTE Toddler_Pitch2Interpolator.value_changed TO Toddler_skullbase.rotation
+#ROUTE Toddler_Pitch2Interpolator.value_changed TO Toddler_l_sternoclavicular.rotation
+#ROUTE Toddler_Pitch2Interpolator.value_changed TO Toddler_r_sternoclavicular.rotation
+#ROUTE Toddler_Pitch2Interpolator.value_changed TO Toddler_l_shoulder.rotation
+#ROUTE Toddler_Pitch2Interpolator.value_changed TO Toddler_r_shoulder.rotation
+#ROUTE Toddler_Pitch2Interpolator.value_changed TO Toddler_l_elbow.rotation
+#ROUTE Toddler_Pitch2Interpolator.value_changed TO Toddler_r_elbow.rotation
+#ROUTE Toddler_Pitch2Interpolator.value_changed TO Toddler_l_radiocarpal.rotation
+#ROUTE Toddler_Pitch2Interpolator.value_changed TO Toddler_r_radiocarpal.rotation
+
+DEF Toddler_RotationInterpolator OrientationInterpolator { 
+key [ 0 0.23 0.54 0.75 1 ] 
+keyValue [ 0 0 1 0, 0 5 0 1, 0 0 1 0, 0 -5 0 1, 0 0 1 0 ] }
+
+#ROUTE Toddler_z100sTimer.fraction_changed TO Toddler_RotationInterpolator.set_fraction
+#ROUTE Toddler_RotationInterpolator.value_changed TO Toddler_humanoid_root.rotation
+#ROUTE Toddler_RotationInterpolator.value_changed TO ToddlerView.rotation 
+ 
+DEF Toddler_RollLeftFingers2 OrientationInterpolator {   key [ 0 0.10 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1 ]   keyValue [ 0 0 1 0, 0 0 0.1 -1, 0 0 0.2 -1, 0 0 0.3 -1, 0 0 1 0, 0 0 1 0, 0 0 0.1 -1, 0 0 0.2 -1, 0 0 0.2 1, 0 0 0.4 -1, 0 0 1 0  ] } 
+
+ROUTE Toddler_z100sTimer.fraction_changed TO Toddler_RollLeftFingers2.set_fraction
+#ROUTE Toddler_RollLeftFingers2.value_changed TO Toddler_l_carpometacarpal_1.rotation
+#ROUTE Toddler_RollLeftFingers2.value_changed TO Toddler_l_metacarpophalangeal_1.rotation
+#ROUTE Toddler_RollLeftFingers2.value_changed TO Toddler_l_carpal_interphalangeal_1.rotation
+#ROUTE Toddler_RollLeftFingers2.value_changed TO Toddler_l_carpal_proximal_interphalangeal_2.rotation
+#ROUTE Toddler_RollLeftFingers2.value_changed TO Toddler_l_metacarpophalangeal_2.rotation
+#ROUTE Toddler_RollLeftFingers2.value_changed TO Toddler_l_carpal_distal_interphalangeal_2.rotation#ROUTE Toddler_RollLeftFingers2.value_changed TO Toddler_l_carpal_proximal_interphalangeal_3.rotation
+#ROUTE Toddler_RollLeftFingers2.value_changed TO Toddler_l_metacarpophalangeal_3.rotation
+#ROUTE Toddler_RollLeftFingers2.value_changed TO Toddler_l_carpal_distal_interphalangeal_3.rotation
+#ROUTE Toddler_RollLeftFingers2.value_changed TO Toddler_l_carpal_proximal_interphalangeal_4.rotation
+#ROUTE Toddler_RollLeftFingers2.value_changed TO Toddler_l_metacarpophalangeal_4.rotation
+#ROUTE Toddler_RollLeftFingers2.value_changed TO Toddler_l_carpal_distal_interphalangeal_4.rotation
+#ROUTE Toddler_RollLeftFingers2.value_changed TO Toddler_l_carpal_proximal_interphalangeal_5.rotation
+#ROUTE Toddler_RollLeftFingers2.value_changed TO Toddler_l_metacarpophalangeal_5.rotation
+#ROUTE Toddler_RollLeftFingers2.value_changed TO Toddler_l_carpal_distal_interphalangeal_5.rotation
+
+DEF Toddler_RollRightFingers2 OrientationInterpolator { 
+key [ 0 0.10 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1 ] 
+keyValue [ 0 0 1 0, 0 0 0.1 1, 0 0 0.2 1, 0 0 0.3 1, 0 0 1 0, 0 0 1 0, 0 0 0.1 1, 0 0 0.2 1, 0 0 0.2 -1, 0 0 0.4 1, 0 0 1 0 ] }
+
+ROUTE Toddler_z100sTimer.fraction_changed TO Toddler_RollRightFingers2.set_fraction
+#ROUTE Toddler_RollRightFingers2.value_changed TO Toddler_r_carpometacarpal_1.rotation 
+#ROUTE Toddler_RollRightFingers2.value_changed TO Toddler_r_metacarpophalangeal_1.rotation
+#ROUTE Toddler_RollRightFingers2.value_changed TO Toddler_r_carpal_interphalangeal_1.rotation
+#ROUTE Toddler_RollRightFingers2.value_changed TO Toddler_r_carpal_proximal_interphalangeal_2.rotation
+#ROUTE Toddler_RollRightFingers2.value_changed TO Toddler_r_metacarpophalangeal_2.rotation
+#ROUTE Toddler_RollRightFingers2.value_changed TO Toddler_r_carpal_distal_interphalangeal_2.rotation
+#ROUTE Toddler_RollRightFingers2.value_changed TO Toddler_r_carpal_proximal_interphalangeal_3.rotation
+#ROUTE Toddler_RollRightFingers2.value_changed TO Toddler_r_metacarpophalangeal_3.rotation
+#ROUTE Toddler_RollRightFingers2.value_changed TO Toddler_r_carpal_distal_interphalangeal_3.rotation
+#ROUTE Toddler_RollRightFingers2.value_changed TO Toddler_r_carpal_proximal_interphalangeal_4.rotation
+#ROUTE Toddler_RollRightFingers2.value_changed TO Toddler_r_metacarpophalangeal_4.rotation
+#ROUTE Toddler_RollRightFingers2.value_changed TO Toddler_r_carpal_distal_interphalangeal_4.rotation
+#ROUTE Toddler_RollRightFingers2.value_changed TO Toddler_r_carpal_proximal_interphalangeal_5.rotation
+#ROUTE Toddler_RollRightFingers2.value_changed TO Toddler_r_metacarpophalangeal_5.rotation
+#ROUTE Toddler_RollRightFingers2.value_changed TO Toddler_r_carpal_distal_interphalangeal_5.rotation
+
+
+# ROUTE Everything_Touch.touchTime TO Toddler_z100sTimer.set_startTime

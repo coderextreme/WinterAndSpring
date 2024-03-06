@@ -1,0 +1,110 @@
+
+DEF SkipAnimation Group {
+ children [
+DEF SkipTimer TimeSensor { cycleInterval 1.73 loop TRUE enabled FALSE }
+DEF Skip_r_kneeRotInterp OrientationInterpolator {
+	key [ 0, 0.125, 0.2083, 0.2917, 0.375, 0.5, 0.6667, 0.7917, 0.9167, 1 ] 
+      	keyValue [
+      		 1 0 0 -0.0,
+      		 1 0 0 -0.33,
+		 1 0 0 -0.66,
+		 1 0 0 -1.0,
+		 1 0 0 -0.66, 
+                 1 0 0 -0.33,
+		 1 0 0 -0.0,
+		 1 0 0 -0.1,
+		 1 0 0 -0.2,
+		 1 0 0 -0.1
+		] }
+DEF Skip_r_hipRotInterp OrientationInterpolator {
+	key [ 0, 0.125, 0.2083, 0.2917, 0.375, 0.5, 0.6667, 0.7917, 0.9167, 1 ] 
+	keyValue [
+      		 -1 0 0 -0.0,
+      		 -1 0 0 -0.33,
+		 -1 0 0 -0.66,
+		 -1 0 0 -1.0,
+		 -1 0 0 -0.66, 
+                 -1 0 0 -0.33,
+		 -1 0 0 -0.0,
+		 -1 0 0 -0.1,
+		 -1 0 0 -0.2,
+		 -1 0 0 -0.1
+		 ] }
+
+DEF Skip_l_kneeRotInterp OrientationInterpolator {
+	key [ 0, 0.125, 0.2083, 0.2917, 0.375, 0.5, 0.6667, 0.7917, 0.9167, 1 ] 
+	keyValue [
+		 1 0 0 -0.0,
+		 1 0 0 -0.1,
+		 1 0 0 -0.2,
+		 1 0 0 -0.1
+      		 1 0 0 -0.0,
+      		 1 0 0 -0.33,
+		 1 0 0 -0.66,
+		 1 0 0 -1.0,
+		 1 0 0 -0.66, 
+                 1 0 0 -0.33,
+		] }
+
+DEF Skip_l_hipRotInterp OrientationInterpolator {
+	key [ 0, 0.125, 0.2083, 0.2917, 0.375, 0.5, 0.6667, 0.7917, 0.9167, 1 ] 
+	keyValue [
+		 -1 0 0 -0.0,
+		 -1 0 0 -0.1,
+		 -1 0 0 -0.2,
+		 -1 0 0 -0.1
+      		 -1 0 0 -0.0,
+      		 -1 0 0 -0.33,
+		 -1 0 0 -0.66,
+		 -1 0 0 -1.0,
+		 -1 0 0 -0.66, 
+                 -1 0 0 -0.33,
+		] }
+
+DEF Skip_whole_bodyTranInterp PositionInterpolator { 
+	key [ 0, 0.125, 0.2083, 0.2917, 0.375, 0.5, 0.6667, 0.7917, 0.9167, 1 ] 
+keyValue [
+	0 0 0
+	0 0.0 0
+	0 0.1 0
+	0 0.0 0
+	0 0 0
+	0 0 0
+	0 0 0
+	0 0.0 0
+	0 0.1 0
+	0 0.0 0
+	] }
+DEF Skip_r_shoulderPitch OrientationInterpolator {
+	key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ]
+	keyValue [ 1 0 0 0, 1 0 0 0.2, 1 0 0 0.22, 1 0 0 0.2, 1 0 0 0, 1 0 0 0 ]}
+DEF Skip_l_shoulderPitch OrientationInterpolator {
+	key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ]
+	keyValue [ 1 0 0 0, 1 0 0 -0.2, 1 0 0 -0.22, 1 0 0 -0.2, 1 0 0 0, 1 0 0 0 ]}
+DEF Skip_r_elbowPitch OrientationInterpolator {
+	key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ]
+	keyValue [ 1 0 0 0, 1 0 0 0.1, 1 0 0 0.11, 1 0 0 0.1, 1 0 0 0, 1 0 0 0 ]}
+DEF Skip_l_elbowPitch OrientationInterpolator {
+	key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ]
+	keyValue [ 1 0 0 0, 1 0 0 -0.1, 1 0 0 -0.11, 1 0 0 -0.1, 1 0 0 0, 1 0 0 0 ]}
+] }
+
+ROUTE SkipTimer.fraction_changed TO Skip_r_kneeRotInterp.set_fraction
+ROUTE SkipTimer.fraction_changed TO Skip_r_hipRotInterp.set_fraction
+ROUTE SkipTimer.fraction_changed TO Skip_l_kneeRotInterp.set_fraction
+ROUTE SkipTimer.fraction_changed TO Skip_l_hipRotInterp.set_fraction
+ROUTE SkipTimer.fraction_changed TO Skip_whole_bodyTranInterp.set_fraction
+ROUTE SkipTimer.fraction_changed TO Skip_l_shoulderPitch.set_fraction 
+ROUTE SkipTimer.fraction_changed TO Skip_r_shoulderPitch.set_fraction 
+ROUTE SkipTimer.fraction_changed TO Skip_l_elbowPitch.set_fraction 
+ROUTE SkipTimer.fraction_changed TO Skip_r_elbowPitch.set_fraction 
+
+ROUTE Skip_r_kneeRotInterp.value_changed TO Toddler_r_knee.rotation
+ROUTE Skip_r_hipRotInterp.value_changed TO Toddler_r_hip.rotation
+ROUTE Skip_l_kneeRotInterp.value_changed TO Toddler_l_knee.rotation
+ROUTE Skip_l_hipRotInterp.value_changed TO Toddler_l_hip.rotation
+ROUTE Skip_whole_bodyTranInterp.value_changed TO Toddler_humanoid_root.translation
+ROUTE Skip_r_shoulderPitch.value_changed TO Toddler_r_shoulder.rotation
+ROUTE Skip_l_shoulderPitch.value_changed TO Toddler_l_shoulder.rotation
+ROUTE Skip_r_elbowPitch.value_changed TO Toddler_r_elbow.rotation
+ROUTE Skip_l_elbowPitch.value_changed TO Toddler_l_elbow.rotation

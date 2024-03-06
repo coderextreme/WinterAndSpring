@@ -1,0 +1,91 @@
+DEF YawsAnimation Group {
+ children [
+DEF YawTimer TimeSensor { cycleInterval 5.73 loop TRUE enabled FALSE }
+DEF Yaw_r_metatarsophalangeal_2Pitch OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.7, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0 ]}
+DEF Yaws_r_talocruralRotInterp OrientationInterpolator { key [ 0, 0.25 0.5, 0.75 1 ] keyValue [ 0 0 1 0, 0 -1 0 1.5, 0 0 1 0, 0 1 0 1.5, 0 0 1 0 ] }
+DEF Yaws_r_kneeRotInterp OrientationInterpolator { key [ 0, 0.25 0.5, 0.75 1 ] keyValue [ 0 0 1 0, 0 1 0 1.5, 0 0 1 0, 0 -1 0 1.5, 0 0 1 0 ] }
+DEF Yaws_r_hipRotInterp OrientationInterpolator { key [ 0, 0.5, 1 ] keyValue [0 0 1 0, 0 0 1 0, 0 0 1 0 ] }
+DEF Yaws_l_talocruralRotInterp OrientationInterpolator { key [ 0, 0.25 0.5, 0.75 1 ] keyValue [ 0 0 1 0, 0 1 0 1.5, 0 0 1 0, 0 -1 0 1.5, 0 0 1 0 ] }
+DEF Yaws_l_kneeRotInterp OrientationInterpolator { key [ 0, 0.25 0.5, 0.75 1 ] keyValue [ 0 0 1 0, 0 -1 0 1.5, 0 0 1 0, 0 1 0 1.5, 0 0 1 0 ] }
+DEF Yaws_l_hipRotInterp OrientationInterpolator { key [ 0, 0.5, 1 ] keyValue [0 0 1 0, 0 0 1 0, 0 0 1 0 ] }
+DEF Yaws_r_radiocarpalRotInterp OrientationInterpolator { key [ 0, 0.5, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0 ] }
+DEF Yaws_r_elbowRotInterp OrientationInterpolator { key [ 0, 0.5, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0 ] }
+DEF Yaws_r_shoulderRotInterp OrientationInterpolator { key [ 0, 0.5, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0 ] }
+DEF Yaws_l_radiocarpalRotInterp OrientationInterpolator { key [ 0, 0.5, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0 ] }
+DEF Yaws_l_elbowRotInterp OrientationInterpolator { key [ 0, 0.5, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0 ] }
+DEF Yaws_l_shoulderRotInterp OrientationInterpolator { key [ 0, 0.5, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0 ] }
+DEF Yaws_headRotInterp OrientationInterpolator { key [0, 0.5, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0 ] }
+DEF Yaws_neckRotInterp OrientationInterpolator { key [ 0, 0.25 0.5, 0.75 1 ] keyValue [ 0 0 1 0, 0 1 0 1.5, 0 0 1 0, 0 -1 0 1.5, 0 0 1 0 ] }
+DEF Yaws_upper_bodyRotInterp OrientationInterpolator { key [ 0, 0.25 0.5, 0.75 1 ] keyValue [ 0 0 1 0, 0 -1 0 1.5, 0 0 1 0, 0 1 0 1.5, 0 0 1 0 ] }
+DEF Yaws_lower_bodyRotInterp OrientationInterpolator { key [ 0, 0.5, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0 ] }
+DEF Yaws_whole_bodyRotInterp OrientationInterpolator { key [ 0, 0.5, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0 ] }
+DEF Yaws_whole_bodyTransInterp PositionInterpolator { key [ 0, 0.5, 1 ] keyValue [ 0 0 0, 0 0 0, 0 0 0 ] }
+DEF Yaw_l_sternoclavicularRoll OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0 ]}
+ # DEF Yaw_l_acromioclavicularRoll OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0 ]}
+DEF Yaw_r_sternoclavicularRoll OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0 ]}
+ # DEF Yaw_r_acromioclavicularRoll OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0 ]}
+DEF Yaw_sacroiliacYaw OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] keyValue [ 0 1 0 0, 0 -1 0 0.1, 0 1 0 0, 0 1 0 0.24, 0 -1 0 0.4, 0 1 0 0 ]}
+DEF Yaw_vl5Yaw OrientationInterpolator { key [ 0, 0.2, 0.4, 0.5, 0.6, 0.8, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0 ]}
+DEF Yaw_vc6Yaw OrientationInterpolator { key [0, 0.2, 0.4, 0.5, 0.6, 0.8, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0 ]}
+DEF Yaw_l_carpometacarpal_1Pitch OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0 ]}
+DEF Yaw_r_carpometacarpal_1Pitch OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0 ]}
+]}
+# ex Yaws_
+ROUTE YawTimer.fraction_changed TO Yaws_r_talocruralRotInterp.set_fraction
+ROUTE YawTimer.fraction_changed TO Yaws_r_kneeRotInterp.set_fraction
+ROUTE YawTimer.fraction_changed TO Yaws_r_hipRotInterp.set_fraction
+ROUTE YawTimer.fraction_changed TO Yaws_l_talocruralRotInterp.set_fraction
+ROUTE YawTimer.fraction_changed TO Yaws_l_kneeRotInterp.set_fraction
+ROUTE YawTimer.fraction_changed TO Yaws_l_hipRotInterp.set_fraction
+ROUTE YawTimer.fraction_changed TO Yaws_lower_bodyRotInterp.set_fraction
+ROUTE YawTimer.fraction_changed TO Yaws_r_radiocarpalRotInterp.set_fraction
+ROUTE YawTimer.fraction_changed TO Yaws_r_elbowRotInterp.set_fraction
+ROUTE YawTimer.fraction_changed TO Yaws_r_shoulderRotInterp.set_fraction
+ROUTE YawTimer.fraction_changed TO Yaws_l_radiocarpalRotInterp.set_fraction
+ROUTE YawTimer.fraction_changed TO Yaws_l_elbowRotInterp.set_fraction
+ROUTE YawTimer.fraction_changed TO Yaws_l_shoulderRotInterp.set_fraction
+ROUTE YawTimer.fraction_changed TO Yaws_headRotInterp.set_fraction
+ROUTE YawTimer.fraction_changed TO Yaws_neckRotInterp.set_fraction
+ROUTE YawTimer.fraction_changed TO Yaws_upper_bodyRotInterp.set_fraction
+ROUTE YawTimer.fraction_changed TO Yaws_whole_bodyRotInterp.set_fraction
+ROUTE YawTimer.fraction_changed TO Yaws_whole_bodyTransInterp.set_fraction
+ROUTE YawTimer.fraction_changed TO Yaw_l_sternoclavicularRoll.set_fraction 
+ # ROUTE YawTimer.fraction_changed TO Yaw_l_acromioclavicularRoll.set_fraction 
+ROUTE YawTimer.fraction_changed TO Yaw_r_sternoclavicularRoll.set_fraction 
+ # ROUTE YawTimer.fraction_changed TO Yaw_r_acromioclavicularRoll.set_fraction 
+ROUTE YawTimer.fraction_changed TO Yaw_r_metatarsophalangeal_2Pitch.set_fraction 
+ROUTE YawTimer.fraction_changed TO Yaw_sacroiliacYaw.set_fraction 
+ROUTE YawTimer.fraction_changed TO Yaw_vl5Yaw.set_fraction 
+ROUTE YawTimer.fraction_changed TO Yaw_vc6Yaw.set_fraction 
+ROUTE YawTimer.fraction_changed TO Yaw_l_carpometacarpal_1Pitch.set_fraction 
+ROUTE YawTimer.fraction_changed TO Yaw_r_carpometacarpal_1Pitch.set_fraction 
+# ex Yaws_
+ROUTE Yaws_r_talocruralRotInterp.value_changed TO Toddler_r_talocrural.rotation
+ROUTE Yaws_r_kneeRotInterp.value_changed TO Toddler_r_knee.rotation
+ROUTE Yaws_r_hipRotInterp.value_changed TO Toddler_r_hip.rotation
+ROUTE Yaws_l_talocruralRotInterp.value_changed TO Toddler_l_talocrural.rotation
+ROUTE Yaws_l_kneeRotInterp.value_changed TO Toddler_l_knee.rotation
+ROUTE Yaws_l_hipRotInterp.value_changed TO Toddler_l_hip.rotation
+ROUTE Yaws_lower_bodyRotInterp.value_changed TO Toddler_sacroiliac.rotation
+ROUTE Yaws_r_radiocarpalRotInterp.value_changed TO Toddler_r_radiocarpal.rotation
+ROUTE Yaws_r_elbowRotInterp.value_changed TO Toddler_r_elbow.rotation
+ROUTE Yaws_r_shoulderRotInterp.value_changed TO Toddler_r_shoulder.rotation
+ROUTE Yaws_l_radiocarpalRotInterp.value_changed TO Toddler_l_radiocarpal.rotation
+ROUTE Yaws_l_elbowRotInterp.value_changed TO Toddler_l_elbow.rotation
+ROUTE Yaws_l_shoulderRotInterp.value_changed TO Toddler_l_shoulder.rotation
+ROUTE Yaws_headRotInterp.value_changed TO Toddler_skullbase.rotation
+ROUTE Yaws_neckRotInterp.value_changed TO Toddler_vc4.rotation
+ # ROUTE Yaws_upper_bodyRotInterp.value_changed TO Toddler_vl1.rotation
+ROUTE Yaws_whole_bodyRotInterp.value_changed TO Toddler_humanoid_root.rotation
+ROUTE Yaws_whole_bodyTransInterp.value_changed TO Toddler_humanoid_root.translation
+ROUTE Yaw_l_sternoclavicularRoll.value_changed TO Toddler_l_sternoclavicular.rotation
+ # ROUTE Yaw_l_acromioclavicularRoll.value_changed TO Toddler_l_acromioclavicular.rotation
+ROUTE Yaw_r_sternoclavicularRoll.value_changed TO Toddler_r_sternoclavicular.rotation
+ # ROUTE Yaw_r_acromioclavicularRoll.value_changed TO Toddler_r_acromioclavicular.rotation
+ROUTE Yaw_r_metatarsophalangeal_2Pitch.value_changed TO Toddler_l_metatarsophalangeal_2.rotation 
+ROUTE Yaw_r_metatarsophalangeal_2Pitch.value_changed TO Toddler_r_metatarsophalangeal_2.rotation 
+ROUTE Yaw_sacroiliacYaw.value_changed TO Toddler_sacroiliac.rotation 
+ROUTE Yaw_vl5Yaw.value_changed TO Toddler_vl5.rotation 
+ # ROUTE Yaw_vc6Yaw.value_changed TO Toddler_vc6.rotation 
+ROUTE Yaw_l_carpometacarpal_1Pitch.value_changed TO Toddler_l_carpometacarpal_1.rotation
+ROUTE Yaw_r_carpometacarpal_1Pitch.value_changed TO Toddler_r_carpometacarpal_1.rotation

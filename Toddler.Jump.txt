@@ -1,0 +1,91 @@
+DEF JumpAnimation Group {
+ children [
+DEF JumpTimer TimeSensor { cycleInterval 3.73 loop TRUE enabled FALSE }
+DEF Jump_r_metatarsophalangeal_2Pitch OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.7, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0 ]}
+DEF Jump_r_talocruralRotInterp OrientationInterpolator { key [ 0, 0.10, 0.15, 0.25, 0.28, 0.32, 0.35, 0.64, 0.76, 0.84, 0.88, 0.92, 0.96, 1 ] keyValue [ 0 0 1 0, -1 0 0 0.6735, -1 0 0 0.6735, -1 0 0 0.3527, -1 0 0 0.3038, -1 0 0 0.07964, 1 0 0 1.3, 1 0 0 0.6509, 1 0 0 0.3001, -1 0 0 0.2087, -1 0 0 0.3756, -1 0 0 0.3279, -1 0 0 0.1193, 0 0 1 0 ] }
+DEF Jump_r_kneeRotInterp OrientationInterpolator { key [ 0, 0.20, 0.25, 0.30, 0.64, 0.76, 0.88, 1 ] keyValue [ 0 0 1 0, 1 0 0 2.5, 1 0 0 1.7, 0 0 1 0, 1 0 0 0.9507, 1 0 0 0.5845, 1 0 0 0.9054, 0 0 1 0 ] }
+DEF Jump_r_hipRotInterp OrientationInterpolator { key [ 0, 0.18, 0.24, 0.26, 0.28, 0.32, 0.48, 0.64, 0.76, 0.88, 1 ] keyValue [ 0 0 1 0, -1 0 0 1.63, -1 0 0 1.7, -1 0 0 1.55, -1 0 0 0.8943, -1 0 0 0.3698, 0 0 1 0, -1 0 0 0.4963, -1 0 0 0.3829, -1 0 0 0.5169, 0 0 1 0 ] }
+DEF Jump_l_talocruralRotInterp OrientationInterpolator { key [ 0, 0.28, 0.32, 0.36, 0.4, 0.44, 0.48, 0.64, 0.76, 0.84, 0.88, 0.92, 0.96, 1 ]  keyValue [ 0 0 1 0, -1 0 0 0.625, -1 0 0 0.625, -1 0 0 0.3364, -1 0 0 0.2742, -1 0 0 0.05078, 1 0 0 0.2833, 1 0 0 0.6667, 1 0 0 0.2833, -1 0 0 0.2108, -1 0 0 0.375, -1 0 0 0.3146, -1 0 0 0.1174, 0 0 1 0 ] }
+DEF Jump_l_kneeRotInterp OrientationInterpolator { key [ 0, 0.28, 0.32, 0.48, 0.64, 0.76, 0.88, 1 ] keyValue [ 0 0 1 0, 1 0 0 2.047, 1 0 0 2.047, 0 0 1 0, 1 0 0 1.566, 1 0 0 0.5913, 1 0 0 0.9235, 0 0 1 0 ] }
+DEF Jump_l_hipRotInterp OrientationInterpolator { key [ 0, 0.28, 0.32, 0.36, 0.4, 0.44, 0.48, 0.64, 0.76, 0.88, 1 ] keyValue [ 0 0 1 0, 1 0 0 4.349, 1 0 0 4.349, 1 0 0 4.615, -1 0 0 0.9136, -1 0 0 0.3614, 0 0 1 0, -1 0 0 0.7869, -1 0 0 0.3918, -1 0 0 0.5433, 0 0 1 0 ] }
+DEF Jump_lower_bodyRotInterp OrientationInterpolator { key [ 0, 0.28, 0.32, 0.48, 0.76, 1 ] keyValue [ 0 0 1 0, 1 0 0 0.1892, 1 0 0 0.1892, 0 0 1 0, 0 0 1 0, 0 0 1 0 ] }
+DEF Jump_r_radiocarpalRotInterp OrientationInterpolator { key [ 0, 0.28, 0.32, 0.64, 0.76, 1 ] keyValue [ 0 0 1 0, -0.0585279 0.983903 -0.168849 1.85956, -0.0585279 0.983903 -0.168849 1.85956, -0.00222418 0.99801 -0.0630095 1.46072, 0 1 0 0.497349, 0 0 1 0 ] }
+DEF Jump_r_elbowRotInterp OrientationInterpolator { key [ 0, 0.28, 0.32, 0.64, 0.76, 1 ] keyValue [ 0 0 1 0, -1 0 0 0.04151, -1 0 0 0.04151, -1 0 0 0.5855, -1 0 0 0.5852, 0 0 1 0 ] }
+DEF Jump_r_shoulderRotInterp OrientationInterpolator { key [ 0, 0.28, 0.32, 0.64, 0.76, 0.88, 1 ] keyValue [ 0 0 1 0, 0.9992 0.02042 0.03558 4.688, 0.9992 0.02042 0.03558 4.688, 0.9989 -0.04623 0.005159 4.079, -0.8687 -0.2525 -0.4261 1.501, -0.941 -0.2893 -0.1754 0.4788, 0 0 1 0 ] }
+DEF Jump_l_radiocarpalRotInterp OrientationInterpolator { key [ 0, 0.48, 0.52, 0.64, 0.76, 0.88, 1 ] keyValue [ 0 0 1 0, 0.0672928 0.989475 -0.128107 4.15574, 0.0672928 0.989475 -0.128107 4.15574, 0.00364942 0.999901 0.0135896 4.5822, 0 -1 0 0.655922, -0.00050618 -0.999999 0.0012782 1.28397, 0 0 1 0 ] }
+DEF Jump_l_elbowRotInterp OrientationInterpolator { key [ 0, 0.28, 0.32, 0.58, 0.72, 1 ] keyValue [ 0 0 1 0, -1 0 0 1.13, -1 0 0 1.7, -1 0 0 1.7, -1 0 0 0.4, 0 0 1 0 ] }
+DEF Jump_l_shoulderRotInterp OrientationInterpolator { key [ 0, 0.28, 0.32, 0.64, 0.76, 0.88, 1 ] keyValue [ 0 0 1 0, -0.9987 0.02554 0.04498 1.57, -0.9987 0.02554 0.04498 1.57, 1 0.0004113 0.003055 4.114, -0.8413 0.3238 0.4329 1.453, -0.877 0.4198 0.2337 0.6009, 0 0 1 0 ] }
+DEF Jump_headRotInterp OrientationInterpolator { key [ 0, 0.28, 0.32, 0.48, 0.76, 1 ] keyValue [ 0 0 1 0, -1 0 0 0.5989, -1 0 0 0.5989, -1 0 0 0.3216, 1 0 0 0.06503, 0 0 1 0 ] }
+DEF Jump_neckRotInterp OrientationInterpolator { key [ 0, 0.28, 0.32, 0.48, 0.76, 1 ] keyValue [ 0 0 1 0, -1 0 0 0.1942, -1 0 0 0.1942, 0 0 1 0, 1 0 0 0.2284, 0 0 1 0 ] }
+DEF Jump_upper_bodyRotInterp OrientationInterpolator { key [ 0, 0.22, 0.28, 0.34, 0.71, 0.88, 1 ] keyValue [ 0 0 1 0, 1 0 0 1.05, 1 0 0 1.051, -1 0 0 0.257, 1 0 0 0.2171, 1 0 0 0.3465, 0 0 1 0 ] }
+DEF Jump_whole_bodyRotInterp OrientationInterpolator { key [ 0, 0.28, 0.32, 0.48, 0.64, 0.76, 1 ] keyValue [ 0 0 1 0, 1 0 0 0.3273, 1 0 0 0.3273, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0 ] }
+DEF Jump_whole_bodyTranInterp PositionInterpolator { key [ 0, 0.04, 0.07, 0.11, 0.15, 0.19, 0.22, 0.25, 0.27, 0.31, 0.33, 0.35, 0.38, 0.53, 0.544, 0.76, 0.8, 0.84, 0.88, 0.92, 0.96, 1 ] keyValue [ 0 0 0, 0 -0.01264 -0.01289, 0 -0.04712 -0.03738, -0.0003345 -0.1049 -0.05353, -0.0005712 -0.1892 -0.06561, -0.0008233 -0.286 -0.06276, -0.0009591 -0.3795 -0.05148, -0.00106 -0.4484 -0.03656, -0.00106 -0.4484 -0.03656, -0.001122 -0.25 -0.1499, -0.0008616 -0.05 -0.06358, -0.0005128 0.15 -0.05488, 0.0004779 0.55 0.02732, 0.0001728 1.385 0.006873, 0.00017 1.395 0.0069, 0 0.35 0.02148, 0 -0.01299 -0.01057, 0 -0.06932 -0.01064, 0.0001365 -0.1037 -0.005059, 0.0001279 -0.07198 -0.007596, 0.000141 -0.01626 -0.004935, 0 0 0 ] }
+DEF Jump_l_sternoclavicularRoll OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] keyValue [ 0 0 1 0, 0 0 1 0.2, 0 0 1 0.22, 0 0 1 0.2, 0 0 1 0, 0 0 1 0 ]}
+ # DEF Jump_l_acromioclavicularRoll OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1  0.05, 0 0 1 0, 0 0 1 0, 0 0 1 0 ]}
+DEF Jump_r_sternoclavicularRoll OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] keyValue [ 0 0 1 0, 0 0 1 -0.2, 0 0 1 -0.22, 0 0 1 -0.2, 0 0 1 0, 0 0 1 0 ]}
+ # DEF Jump_r_acromioclavicularRoll OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] keyValue [ 0 0 1 0, 0 0 1 0, 0 0 1 -0.05, 0 0 1 0, 0 0 1 0, 0 0 1 0 ]}
+DEF Jump_sacroiliacYaw OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] keyValue [ 0 1 0 0, 0 -1 0 0.1, 0 1 0 0, 0 1 -1 0.24, 0 -1 0 0.4, 0 1 0 0 ]}
+DEF Jump_vl5Yaw OrientationInterpolator { key [ 0, 0.2, 0.4, 0.5, 0.6, 0.8, 1 ] keyValue [ 0 1 0 0, 0 1 0 -0.1, 0 1 0 0, 0 1 0 0, 1 0 0 0.6, 0 1 0 0.1, 0 1 0 0 ]}
+DEF Jump_vc6Yaw OrientationInterpolator { key [0, 0.2, 0.4, 0.5, 0.6, 0.8, 1 ] keyValue [ 0 1 0 0, 0 1 0 0.8, 0 1 0 0, 0 1 0 0, -1 0 0 0.6, 0 -1 0 0.8, 0 1 0 0 ]}
+DEF Jump_l_carpometacarpal_1Pitch OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] keyValue [ 1 0 0 0, 1 0 0 0.5, 1 0 0 1.1, 1 0 0 0.7, 1 0 0 0.2, 1 0 0 0 ]}
+DEF Jump_r_carpometacarpal_1Pitch OrientationInterpolator { key [ 0, 0.2, 0.4, 0.6, 0.8, 1 ] keyValue [ 1 0 0 0, 1 0 0 0.5, 1 0 0 1.1, 1 0 0 0.7, 1 0 0 0.2, 1 0 0 0 ]}
+]}
+# ex Jump_
+ROUTE JumpTimer.fraction_changed TO Jump_r_talocruralRotInterp.set_fraction
+ROUTE JumpTimer.fraction_changed TO Jump_r_kneeRotInterp.set_fraction
+ROUTE JumpTimer.fraction_changed TO Jump_r_hipRotInterp.set_fraction
+ROUTE JumpTimer.fraction_changed TO Jump_l_talocruralRotInterp.set_fraction
+ROUTE JumpTimer.fraction_changed TO Jump_l_kneeRotInterp.set_fraction
+ROUTE JumpTimer.fraction_changed TO Jump_l_hipRotInterp.set_fraction
+ROUTE JumpTimer.fraction_changed TO Jump_lower_bodyRotInterp.set_fraction
+ROUTE JumpTimer.fraction_changed TO Jump_r_radiocarpalRotInterp.set_fraction
+ROUTE JumpTimer.fraction_changed TO Jump_r_elbowRotInterp.set_fraction
+ROUTE JumpTimer.fraction_changed TO Jump_r_shoulderRotInterp.set_fraction
+ROUTE JumpTimer.fraction_changed TO Jump_l_radiocarpalRotInterp.set_fraction
+ROUTE JumpTimer.fraction_changed TO Jump_l_elbowRotInterp.set_fraction
+ROUTE JumpTimer.fraction_changed TO Jump_l_shoulderRotInterp.set_fraction
+ROUTE JumpTimer.fraction_changed TO Jump_headRotInterp.set_fraction
+ROUTE JumpTimer.fraction_changed TO Jump_neckRotInterp.set_fraction
+ROUTE JumpTimer.fraction_changed TO Jump_upper_bodyRotInterp.set_fraction
+ROUTE JumpTimer.fraction_changed TO Jump_whole_bodyRotInterp.set_fraction
+ROUTE JumpTimer.fraction_changed TO Jump_whole_bodyTranInterp.set_fraction
+ROUTE JumpTimer.fraction_changed TO Jump_l_sternoclavicularRoll.set_fraction 
+ # ROUTE JumpTimer.fraction_changed TO Jump_l_acromioclavicularRoll.set_fraction 
+ROUTE JumpTimer.fraction_changed TO Jump_r_sternoclavicularRoll.set_fraction 
+ # ROUTE JumpTimer.fraction_changed TO Jump_r_acromioclavicularRoll.set_fraction 
+ROUTE JumpTimer.fraction_changed TO Jump_r_metatarsophalangeal_2Pitch.set_fraction 
+ROUTE JumpTimer.fraction_changed TO Jump_sacroiliacYaw.set_fraction 
+ROUTE JumpTimer.fraction_changed TO Jump_vl5Yaw.set_fraction 
+ROUTE JumpTimer.fraction_changed TO Jump_vc6Yaw.set_fraction 
+ROUTE JumpTimer.fraction_changed TO Jump_l_carpometacarpal_1Pitch.set_fraction 
+ROUTE JumpTimer.fraction_changed TO Jump_r_carpometacarpal_1Pitch.set_fraction 
+# ex Jump_
+ROUTE Jump_r_talocruralRotInterp.value_changed TO Toddler_r_talocrural.rotation
+ROUTE Jump_r_kneeRotInterp.value_changed TO Toddler_r_knee.rotation
+ROUTE Jump_r_hipRotInterp.value_changed TO Toddler_r_hip.rotation
+ROUTE Jump_l_talocruralRotInterp.value_changed TO Toddler_l_talocrural.rotation
+ROUTE Jump_l_kneeRotInterp.value_changed TO Toddler_l_knee.rotation
+ROUTE Jump_l_hipRotInterp.value_changed TO Toddler_l_hip.rotation
+ROUTE Jump_lower_bodyRotInterp.value_changed TO Toddler_sacroiliac.rotation
+ROUTE Jump_r_radiocarpalRotInterp.value_changed TO Toddler_r_radiocarpal.rotation
+ROUTE Jump_r_elbowRotInterp.value_changed TO Toddler_r_elbow.rotation
+ROUTE Jump_r_shoulderRotInterp.value_changed TO Toddler_r_shoulder.rotation
+ROUTE Jump_l_radiocarpalRotInterp.value_changed TO Toddler_l_radiocarpal.rotation
+ROUTE Jump_l_elbowRotInterp.value_changed TO Toddler_l_elbow.rotation
+ROUTE Jump_l_shoulderRotInterp.value_changed TO Toddler_l_shoulder.rotation
+ROUTE Jump_headRotInterp.value_changed TO Toddler_skullbase.rotation
+ROUTE Jump_neckRotInterp.value_changed TO Toddler_vc4.rotation
+ # ROUTE Jump_upper_bodyRotInterp.value_changed TO Toddler_vl1.rotation
+ROUTE Jump_whole_bodyRotInterp.value_changed TO Toddler_humanoid_root.rotation
+ROUTE Jump_whole_bodyTranInterp.value_changed TO Toddler_humanoid_root.translation
+ROUTE Jump_l_sternoclavicularRoll.value_changed TO Toddler_l_sternoclavicular.rotation
+ # ROUTE Jump_l_acromioclavicularRoll.value_changed TO Toddler_l_acromioclavicular.rotation
+ROUTE Jump_r_sternoclavicularRoll.value_changed TO Toddler_r_sternoclavicular.rotation
+ # ROUTE Jump_r_acromioclavicularRoll.value_changed TO Toddler_r_acromioclavicular.rotation
+ROUTE Jump_r_metatarsophalangeal_2Pitch.value_changed TO Toddler_l_metatarsophalangeal_2.rotation 
+ROUTE Jump_r_metatarsophalangeal_2Pitch.value_changed TO Toddler_r_metatarsophalangeal_2.rotation 
+ROUTE Jump_sacroiliacYaw.value_changed TO Toddler_sacroiliac.rotation 
+ROUTE Jump_vl5Yaw.value_changed TO Toddler_vl5.rotation 
+ # ROUTE Jump_vc6Yaw.value_changed TO Toddler_vc6.rotation 
+ROUTE Jump_l_carpometacarpal_1Pitch.value_changed TO Toddler_l_carpometacarpal_1.rotation
+ROUTE Jump_r_carpometacarpal_1Pitch.value_changed TO Toddler_r_carpometacarpal_1.rotation

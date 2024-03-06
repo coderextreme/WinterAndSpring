@@ -1,0 +1,274 @@
+DEF StopAnimation Group {
+ children [
+DEF StopTimer TimeSensor { cycleInterval 5.73 loop TRUE enabled FALSE }
+  DEF Stop_humanoid_rootTransInterp PositionInterpolator { key [0,0.5,1] keyValue [0 0 0,0 0 0,0 0 0] }
+  DEF Stop_humanoid_rootRotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+  DEF Stop_sacroiliacRotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+  DEF Stop_l_hipRotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+  DEF Stop_l_kneeRotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+  DEF Stop_l_talocruralRotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+ # DEF Stop_l_subtalarRotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+ # DEF Stop_l_midtarsalRotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+  DEF Stop_l_metatarsophalangeal_2RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+  DEF Stop_r_hipRotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+  DEF Stop_r_kneeRotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+  DEF Stop_r_talocruralRotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+ # DEF Stop_r_subtalarRotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+ # DEF Stop_r_midtarsalRotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+  DEF Stop_r_metatarsophalangeal_2RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+DEF Stop_vl5RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+ # DEF Stop_vl4RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+ # DEF Stop_vl3RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+DEF Stop_vl2RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+ # DEF Stop_vl1RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+ # DEF Stop_vt12RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+DEF Stop_vt11RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+ # DEF Stop_vt10RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+DEF Stop_vt9RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+ # DEF Stop_vt8RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+ # DEF Stop_vt7RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+ # DEF Stop_vt6RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+DEF Stop_vt5RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+ # DEF Stop_vt4RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+ # DEF Stop_vt3RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+ # DEF Stop_vt2RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+ # DEF Stop_vt1RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+ # DEF Stop_vc7RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+ # DEF Stop_vc6RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+ # DEF Stop_vc5RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+  DEF Stop_vc4RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+ # DEF Stop_vc3RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+ # DEF Stop_vc2RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+ # DEF Stop_vc1RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+  DEF Stop_skullbaseRotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+ # DEF Stop_l_eyeball_jointRotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+ # DEF Stop_r_eyeball_jointRotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+  DEF Stop_l_sternoclavicularRotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+ # DEF Stop_l_acromioclavicularRotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+  DEF Stop_l_shoulderRotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+  DEF Stop_l_elbowRotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+  DEF Stop_l_radiocarpalRotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }  
+  DEF Stop_l_carpometacarpal_1RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+  DEF Stop_l_metacarpophalangeal_1RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+  DEF Stop_l_carpal_interphalangeal_1RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+ # DEF Stop_l_index0RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+  DEF Stop_l_carpal_proximal_interphalangeal_2RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+  DEF Stop_l_metacarpophalangeal_2RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }  
+  DEF Stop_l_carpal_distal_interphalangeal_2RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }  
+ # DEF Stop_l_middle0RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }  
+  DEF Stop_l_carpal_proximal_interphalangeal_3RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }  
+  DEF Stop_l_metacarpophalangeal_3RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }  
+  DEF Stop_l_carpal_distal_interphalangeal_3RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }  
+ # DEF Stop_l_ring0RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }  
+  DEF Stop_l_carpal_proximal_interphalangeal_4RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }  
+  DEF Stop_l_metacarpophalangeal_4RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }  
+  DEF Stop_l_carpal_distal_interphalangeal_4RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }  
+ # DEF Stop_l_pinky0RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }  
+  DEF Stop_l_carpal_proximal_interphalangeal_5RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }  
+  DEF Stop_l_metacarpophalangeal_5RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }  
+  DEF Stop_l_carpal_distal_interphalangeal_5RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }  
+  DEF Stop_r_sternoclavicularRotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }  
+   # DEF Stop_r_acromioclavicularRotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }  
+  DEF Stop_r_shoulderRotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }  
+  DEF Stop_r_elbowRotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }  
+  DEF Stop_r_radiocarpalRotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }  
+  DEF Stop_r_carpometacarpal_1RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }  
+  DEF Stop_r_metacarpophalangeal_1RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }  
+  DEF Stop_r_carpal_interphalangeal_1RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }  
+ # DEF Stop_r_index0RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }  
+  DEF Stop_r_carpal_proximal_interphalangeal_2RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }  
+  DEF Stop_r_metacarpophalangeal_2RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }  
+  DEF Stop_r_carpal_distal_interphalangeal_2RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }  
+ # DEF Stop_r_middle0RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }  
+  DEF Stop_r_carpal_proximal_interphalangeal_3RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }  
+  DEF Stop_r_metacarpophalangeal_3RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }  
+  DEF Stop_r_carpal_distal_interphalangeal_3RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }  
+ # DEF Stop_r_ring0RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }  
+  DEF Stop_r_carpal_proximal_interphalangeal_4RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }  
+  DEF Stop_r_metacarpophalangeal_4RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }  
+  DEF Stop_r_carpal_distal_interphalangeal_4RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }  
+#  DEF Stop_r_pinky0RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }  
+  DEF Stop_r_carpal_proximal_interphalangeal_5RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }  
+  DEF Stop_r_metacarpophalangeal_5RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }  
+  DEF Stop_r_carpal_distal_interphalangeal_5RotInterp OrientationInterpolator { key [0,0.5,1] keyValue [0 0 1 0,0 0 1 0,0 0 1 0] }
+]}
+  ROUTE StopTimer.fraction_changed TO Stop_humanoid_rootTransInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_humanoid_rootRotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_sacroiliacRotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_l_hipRotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_l_kneeRotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_l_talocruralRotInterp.set_fraction
+ # ROUTE StopTimer.fraction_changed TO Stop_l_subtalarRotInterp.set_fraction
+ # ROUTE StopTimer.fraction_changed TO Stop_l_midtarsalRotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_l_metatarsophalangeal_2RotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_r_hipRotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_r_kneeRotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_r_talocruralRotInterp.set_fraction
+ # ROUTE StopTimer.fraction_changed TO Stop_r_subtalarRotInterp.set_fraction
+ # ROUTE StopTimer.fraction_changed TO Stop_r_midtarsalRotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_r_metatarsophalangeal_2RotInterp.set_fraction
+ROUTE StopTimer.fraction_changed TO Stop_vl5RotInterp.set_fraction
+ # ROUTE StopTimer.fraction_changed TO Stop_vl4RotInterp.set_fraction
+ # ROUTE StopTimer.fraction_changed TO Stop_vl3RotInterp.set_fraction
+ROUTE StopTimer.fraction_changed TO Stop_vl2RotInterp.set_fraction
+ # ROUTE StopTimer.fraction_changed TO Stop_vl1RotInterp.set_fraction
+ # ROUTE StopTimer.fraction_changed TO Stop_vt12RotInterp.set_fraction
+ROUTE StopTimer.fraction_changed TO Stop_vt11RotInterp.set_fraction
+ # ROUTE StopTimer.fraction_changed TO Stop_vt10RotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_vt9RotInterp.set_fraction
+ # ROUTE StopTimer.fraction_changed TO Stop_vt8RotInterp.set_fraction
+ # ROUTE StopTimer.fraction_changed TO Stop_vt7RotInterp.set_fraction
+ # ROUTE StopTimer.fraction_changed TO Stop_vt6RotInterp.set_fraction
+ROUTE StopTimer.fraction_changed TO Stop_vt5RotInterp.set_fraction
+ # ROUTE StopTimer.fraction_changed TO Stop_vt4RotInterp.set_fraction
+ # ROUTE StopTimer.fraction_changed TO Stop_vt3RotInterp.set_fraction
+ # ROUTE StopTimer.fraction_changed TO Stop_vt2RotInterp.set_fraction
+ # ROUTE StopTimer.fraction_changed TO Stop_vt1RotInterp.set_fraction
+ # ROUTE StopTimer.fraction_changed TO Stop_vc7RotInterp.set_fraction
+ # ROUTE StopTimer.fraction_changed TO Stop_vc6RotInterp.set_fraction
+ # ROUTE StopTimer.fraction_changed TO Stop_vc5RotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_vc4RotInterp.set_fraction
+ # ROUTE StopTimer.fraction_changed TO Stop_vc3RotInterp.set_fraction
+ # ROUTE StopTimer.fraction_changed TO Stop_vc2RotInterp.set_fraction
+ # ROUTE StopTimer.fraction_changed TO Stop_vc1RotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_skullbaseRotInterp.set_fraction
+ # ROUTE StopTimer.fraction_changed TO Stop_l_eyeball_jointRotInterp.set_fraction
+ # ROUTE StopTimer.fraction_changed TO Stop_r_eyeball_jointRotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_l_sternoclavicularRotInterp.set_fraction
+ # ROUTE StopTimer.fraction_changed TO Stop_l_acromioclavicularRotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_l_shoulderRotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_l_elbowRotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_l_radiocarpalRotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_l_carpometacarpal_1RotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_l_metacarpophalangeal_1RotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_l_carpal_interphalangeal_1RotInterp.set_fraction
+ # ROUTE StopTimer.fraction_changed TO Stop_l_index0RotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_l_carpal_proximal_interphalangeal_2RotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_l_metacarpophalangeal_2RotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_l_carpal_distal_interphalangeal_2RotInterp.set_fraction
+ # ROUTE StopTimer.fraction_changed TO Stop_l_middle0RotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_l_carpal_proximal_interphalangeal_3RotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_l_metacarpophalangeal_3RotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_l_carpal_distal_interphalangeal_3RotInterp.set_fraction
+ # ROUTE StopTimer.fraction_changed TO Stop_l_ring0RotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_l_carpal_proximal_interphalangeal_4RotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_l_metacarpophalangeal_4RotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_l_carpal_distal_interphalangeal_4RotInterp.set_fraction
+ # ROUTE StopTimer.fraction_changed TO Stop_l_pinky0RotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_l_carpal_proximal_interphalangeal_5RotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_l_metacarpophalangeal_5RotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_l_carpal_distal_interphalangeal_5RotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_r_sternoclavicularRotInterp.set_fraction
+ # ROUTE StopTimer.fraction_changed TO Stop_r_acromioclavicularRotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_r_shoulderRotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_r_elbowRotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_r_radiocarpalRotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_r_carpometacarpal_1RotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_r_metacarpophalangeal_1RotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_r_carpal_interphalangeal_1RotInterp.set_fraction
+ # ROUTE StopTimer.fraction_changed TO Stop_r_index0RotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_r_carpal_proximal_interphalangeal_2RotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_r_metacarpophalangeal_2RotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_r_carpal_distal_interphalangeal_2RotInterp.set_fraction
+ # ROUTE StopTimer.fraction_changed TO Stop_r_middle0RotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_r_carpal_proximal_interphalangeal_3RotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_r_metacarpophalangeal_3RotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_r_carpal_distal_interphalangeal_3RotInterp.set_fraction
+ # ROUTE StopTimer.fraction_changed TO Stop_r_ring0RotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_r_carpal_proximal_interphalangeal_4RotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_r_metacarpophalangeal_4RotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_r_carpal_distal_interphalangeal_4RotInterp.set_fraction
+ # ROUTE StopTimer.fraction_changed TO Stop_r_pinky0RotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_r_carpal_proximal_interphalangeal_5RotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_r_metacarpophalangeal_5RotInterp.set_fraction
+  ROUTE StopTimer.fraction_changed TO Stop_r_carpal_distal_interphalangeal_5RotInterp.set_fraction
+  ROUTE Stop_humanoid_rootTransInterp.value_changed TO Toddler_humanoid_root.set_translation
+  ROUTE Stop_humanoid_rootRotInterp.value_changed TO Toddler_humanoid_root.set_rotation
+  ROUTE Stop_sacroiliacRotInterp.value_changed TO Toddler_sacroiliac.set_rotation
+  ROUTE Stop_l_hipRotInterp.value_changed TO Toddler_l_hip.set_rotation
+  ROUTE Stop_l_kneeRotInterp.value_changed TO Toddler_l_knee.set_rotation
+  ROUTE Stop_l_talocruralRotInterp.value_changed TO Toddler_l_talocrural.set_rotation
+ # ROUTE Stop_l_subtalarRotInterp.value_changed TO Toddler_l_subtalar.set_rotation
+ # ROUTE Stop_l_midtarsalRotInterp.value_changed TO Toddler_l_midtarsal.set_rotation
+  ROUTE Stop_l_metatarsophalangeal_2RotInterp.value_changed TO Toddler_l_metatarsophalangeal_2.set_rotation
+  ROUTE Stop_r_hipRotInterp.value_changed TO Toddler_r_hip.set_rotation
+  ROUTE Stop_r_kneeRotInterp.value_changed TO Toddler_r_knee.set_rotation
+  ROUTE Stop_r_talocruralRotInterp.value_changed TO Toddler_r_talocrural.set_rotation
+ # ROUTE Stop_r_subtalarRotInterp.value_changed TO Toddler_r_subtalar.set_rotation
+ # ROUTE Stop_r_midtarsalRotInterp.value_changed TO Toddler_r_midtarsal.set_rotation
+  ROUTE Stop_r_metatarsophalangeal_2RotInterp.value_changed TO Toddler_r_metatarsophalangeal_2.set_rotation
+  ROUTE Stop_vl5RotInterp.value_changed TO Toddler_vl5.set_rotation
+ # ROUTE Stop_vl4RotInterp.value_changed TO Toddler_vl4.set_rotation
+ # ROUTE Stop_vl3RotInterp.value_changed TO Toddler_vl3.set_rotation
+ROUTE Stop_vl2RotInterp.value_changed TO Toddler_vl2.set_rotation
+ # ROUTE Stop_vl1RotInterp.value_changed TO Toddler_vl1.set_rotation
+ # ROUTE Stop_vt12RotInterp.value_changed TO Toddler_vt12.set_rotation
+ROUTE Stop_vt11RotInterp.value_changed TO Toddler_vt11.set_rotation
+ # ROUTE Stop_vt10RotInterp.value_changed TO Toddler_vt10.set_rotation
+ # ROUTE Stop_vt9RotInterp.value_changed TO Toddler_vt9.set_rotation
+ # ROUTE Stop_vt8RotInterp.value_changed TO Toddler_vt8.set_rotation
+ # ROUTE Stop_vt7RotInterp.value_changed TO Toddler_vt7.set_rotation
+ # ROUTE Stop_vt6RotInterp.value_changed TO Toddler_vt6.set_rotation
+ROUTE Stop_vt5RotInterp.value_changed TO Toddler_vt5.set_rotation
+ # ROUTE Stop_vt4RotInterp.value_changed TO Toddler_vt4.set_rotation
+ # ROUTE Stop_vt3RotInterp.value_changed TO Toddler_vt3.set_rotation
+ # ROUTE Stop_vt2RotInterp.value_changed TO Toddler_vt2.set_rotation
+ # ROUTE Stop_vt1RotInterp.value_changed TO Toddler_vt1.set_rotation
+ # ROUTE Stop_vc7RotInterp.value_changed TO Toddler_vc7.set_rotation
+ # ROUTE Stop_vc6RotInterp.value_changed TO Toddler_vc6.set_rotation
+ # ROUTE Stop_vc5RotInterp.value_changed TO Toddler_vc5.set_rotation
+ROUTE Stop_vc4RotInterp.value_changed TO Toddler_vc4.set_rotation
+ # ROUTE Stop_vc3RotInterp.value_changed TO Toddler_vc3.set_rotation
+ # ROUTE Stop_vc2RotInterp.value_changed TO Toddler_vc2.set_rotation
+ # ROUTE Stop_vc1RotInterp.value_changed TO Toddler_vc1.set_rotation
+  ROUTE Stop_skullbaseRotInterp.value_changed TO Toddler_skullbase.set_rotation
+ # ROUTE Stop_l_eyeball_jointRotInterp.value_changed TO Toddler_l_eyeball_joint.set_rotation
+ # ROUTE Stop_r_eyeball_jointRotInterp.value_changed TO Toddler_r_eyeball_joint.set_rotation
+  ROUTE Stop_l_sternoclavicularRotInterp.value_changed TO Toddler_l_sternoclavicular.set_rotation
+ # ROUTE Stop_l_acromioclavicularRotInterp.value_changed TO Toddler_l_acromioclavicular.set_rotation
+  ROUTE Stop_l_shoulderRotInterp.value_changed TO Toddler_l_shoulder.set_rotation
+  ROUTE Stop_l_elbowRotInterp.value_changed TO Toddler_l_elbow.set_rotation
+  ROUTE Stop_l_radiocarpalRotInterp.value_changed TO Toddler_l_radiocarpal.set_rotation
+  ROUTE Stop_l_carpometacarpal_1RotInterp.value_changed TO Toddler_l_carpometacarpal_1.set_rotation
+  ROUTE Stop_l_metacarpophalangeal_1RotInterp.value_changed TO Toddler_l_metacarpophalangeal_1.set_rotation
+  ROUTE Stop_l_carpal_interphalangeal_1RotInterp.value_changed TO Toddler_l_carpal_interphalangeal_1.set_rotation
+ # ROUTE Stop_l_index0RotInterp.value_changed TO Toddler_l_index0.set_rotation
+  ROUTE Stop_l_carpal_proximal_interphalangeal_2RotInterp.value_changed TO Toddler_l_carpal_proximal_interphalangeal_2.set_rotation
+  ROUTE Stop_l_metacarpophalangeal_2RotInterp.value_changed TO Toddler_l_metacarpophalangeal_2.set_rotation
+  ROUTE Stop_l_carpal_distal_interphalangeal_2RotInterp.value_changed TO Toddler_l_carpal_distal_interphalangeal_2.set_rotation
+ # ROUTE Stop_l_middle0RotInterp.value_changed TO Toddler_l_middle0.set_rotation
+  ROUTE Stop_l_carpal_proximal_interphalangeal_3RotInterp.value_changed TO Toddler_l_carpal_proximal_interphalangeal_3.set_rotation
+  ROUTE Stop_l_metacarpophalangeal_3RotInterp.value_changed TO Toddler_l_metacarpophalangeal_3.set_rotation
+  ROUTE Stop_l_carpal_distal_interphalangeal_3RotInterp.value_changed TO Toddler_l_carpal_distal_interphalangeal_3.set_rotation
+ # ROUTE Stop_l_ring0RotInterp.value_changed TO Toddler_l_ring0.set_rotation
+  ROUTE Stop_l_carpal_proximal_interphalangeal_4RotInterp.value_changed TO Toddler_l_carpal_proximal_interphalangeal_4.set_rotation
+  ROUTE Stop_l_metacarpophalangeal_4RotInterp.value_changed TO Toddler_l_metacarpophalangeal_4.set_rotation
+  ROUTE Stop_l_carpal_distal_interphalangeal_4RotInterp.value_changed TO Toddler_l_carpal_distal_interphalangeal_4.set_rotation
+ # ROUTE Stop_l_pinky0RotInterp.value_changed TO Toddler_l_pinky0.set_rotation
+  ROUTE Stop_l_carpal_proximal_interphalangeal_5RotInterp.value_changed TO Toddler_l_carpal_proximal_interphalangeal_5.set_rotation
+  ROUTE Stop_l_metacarpophalangeal_5RotInterp.value_changed TO Toddler_l_metacarpophalangeal_5.set_rotation
+  ROUTE Stop_l_carpal_distal_interphalangeal_5RotInterp.value_changed TO Toddler_l_carpal_distal_interphalangeal_5.set_rotation
+  ROUTE Stop_r_sternoclavicularRotInterp.value_changed TO Toddler_r_sternoclavicular.set_rotation
+ # ROUTE Stop_r_acromioclavicularRotInterp.value_changed TO Toddler_r_acromioclavicular.set_rotation
+  ROUTE Stop_r_shoulderRotInterp.value_changed TO Toddler_r_shoulder.set_rotation
+  ROUTE Stop_r_elbowRotInterp.value_changed TO Toddler_r_elbow.set_rotation
+  ROUTE Stop_r_radiocarpalRotInterp.value_changed TO Toddler_r_radiocarpal.set_rotation
+  ROUTE Stop_r_carpometacarpal_1RotInterp.value_changed TO Toddler_r_carpometacarpal_1.set_rotation
+  ROUTE Stop_r_metacarpophalangeal_1RotInterp.value_changed TO Toddler_r_metacarpophalangeal_1.set_rotation
+  ROUTE Stop_r_carpal_interphalangeal_1RotInterp.value_changed TO Toddler_r_carpal_interphalangeal_1.set_rotation
+ # ROUTE Stop_r_index0RotInterp.value_changed TO Toddler_r_index0.set_rotation
+  ROUTE Stop_r_carpal_proximal_interphalangeal_2RotInterp.value_changed TO Toddler_r_carpal_proximal_interphalangeal_2.set_rotation
+  ROUTE Stop_r_metacarpophalangeal_2RotInterp.value_changed TO Toddler_r_metacarpophalangeal_2.set_rotation
+  ROUTE Stop_r_carpal_distal_interphalangeal_2RotInterp.value_changed TO Toddler_r_carpal_distal_interphalangeal_2.set_rotation
+ # ROUTE Stop_r_middle0RotInterp.value_changed TO Toddler_r_middle0.set_rotation
+  ROUTE Stop_r_carpal_proximal_interphalangeal_3RotInterp.value_changed TO Toddler_r_carpal_proximal_interphalangeal_3.set_rotation
+  ROUTE Stop_r_metacarpophalangeal_3RotInterp.value_changed TO Toddler_r_metacarpophalangeal_3.set_rotation
+  ROUTE Stop_r_carpal_distal_interphalangeal_3RotInterp.value_changed TO Toddler_r_carpal_distal_interphalangeal_3.set_rotation
+ # ROUTE Stop_r_ring0RotInterp.value_changed TO Toddler_r_ring0.set_rotation
+  ROUTE Stop_r_carpal_proximal_interphalangeal_4RotInterp.value_changed TO Toddler_r_carpal_proximal_interphalangeal_4.set_rotation
+  ROUTE Stop_r_metacarpophalangeal_4RotInterp.value_changed TO Toddler_r_metacarpophalangeal_4.set_rotation
+  ROUTE Stop_r_carpal_distal_interphalangeal_4RotInterp.value_changed TO Toddler_r_carpal_distal_interphalangeal_4.set_rotation
+ # ROUTE Stop_r_pinky0RotInterp.value_changed TO Toddler_r_pinky0.set_rotation
+  ROUTE Stop_r_carpal_proximal_interphalangeal_5RotInterp.value_changed TO Toddler_r_carpal_proximal_interphalangeal_5.set_rotation
+  ROUTE Stop_r_metacarpophalangeal_5RotInterp.value_changed TO Toddler_r_metacarpophalangeal_5.set_rotation
+  ROUTE Stop_r_carpal_distal_interphalangeal_5RotInterp.value_changed TO Toddler_r_carpal_distal_interphalangeal_5.set_rotation
