@@ -13,7 +13,7 @@
 23.0038 0.0796 24.3699, #(1) (Leif_Stand01)
 ";
 
-open(BRIDGE, "<0MainStageTotal_7Saved.txt") || die "Can't open 0MainStageTotal_7Saved.txt!\n";
+open(BRIDGE, "<WinterAndSpringHumanoidTimingsRoot0406.txt") || die "Can't open 0MainStageTotal_7Saved.txt!\n";
 
 print "<!DOCTYPE html>
 <html>

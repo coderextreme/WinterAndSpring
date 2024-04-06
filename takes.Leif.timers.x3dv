@@ -1,0 +1,51 @@
+#X3D V4.0 utf8
+PROFILE Immersive
+# head
+COMPONENT HAnim:1
+META "title" "takes.Leif.timers.x3dv"
+META "creator" "John Carlson, Joe Williams and Andreas Plesch"
+META "translator" "X3DJSAIL"
+META "version" "3.0"
+META "description" "Create Chaining animation from a JSON file"
+META "generator" "Jaminate, V3.0, https://github.com/coderextreme/jaminate/tree/main/Jaminate/app/src/main/resources/takesX3DJSAIL.js"
+META "license" "https://github.com/coderextreme/jaminate/blob/main/LICENSE"
+# Scene
+  children [
+  WorldInfo { 
+     title "takes.Leif.timers.x3dv"
+     }
+# 0.223 - 0 = 0.223, times 10 is 2.23
+    DEF Leif_Stand010Timer TimeSensor { 
+     cycleInterval 2.23
+     loop true
+     }
+# 0.433 - 0.223 = 0.21000000000000002, times 10 is 2.1
+    DEF Leif_Run011Timer TimeSensor { 
+     cycleInterval 2.1
+     loop true
+     }
+# 0.63 - 0.433 = 0.19699999999999998, times 10 is 1.9699999999999998
+    DEF Leif_Turn012Timer TimeSensor { 
+     cycleInterval 1.9699999999999998
+     loop true
+     }
+# 0.73 - 0.63 = 0.1, times 10 is 1
+    DEF Leif_Walk013Timer TimeSensor { 
+     loop true
+     }
+# 0.86 - 0.73 = 0.12999999999999998, times 10 is 1.2999999999999998
+    DEF Leif_Skip014Timer TimeSensor { 
+     cycleInterval 1.2999999999999998
+     loop true
+     }
+# 1 - 0.86 = 0.14000000000000004, times 10 is 1.4000000000000004
+    DEF Leif_Stand015Timer TimeSensor { 
+     cycleInterval 1.4000000000000004
+     loop true
+     }
+# 0 - 1 = 0.001, times 10 is 0.01
+    DEF Leif_Stand016Timer TimeSensor { 
+     cycleInterval 0.01
+     loop true
+     }
+  ]

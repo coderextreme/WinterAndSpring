@@ -6,7 +6,7 @@ IFS=$'\n\t'
 # convert  VRML skeleton by multiplying out transforms to create centers without transforms
 # by way of X3D JSON
 
-# perl takes.json.pl < 0MainStageTotal_7Saved.txt > takes.json
+# perl takes.json.pl < WinterAndSpringHumanoidTimingsRoot0406.txt > takes.json
 
 npx x3d-tidy@1.0.91 -i "`pwd`""/InputDir73/lily 7_3_animate.wrl" -o "`pwd`"/"/InputDir73/lily 7_3_animate.x3dv"
 npx x3d-tidy@1.0.91 -i "`pwd`""/InputDir73/lily 7_3_animate.wrl" -o "`pwd`"/"/InputDir73/lily 7_3_animate.x3dj"
