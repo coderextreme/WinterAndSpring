@@ -7,6 +7,7 @@ export VERSION=8
 export DOWNLOADS="C:/Users/jcarl/Downloads"
 export X3DJSONLD="C:/Users/jcarl/X3DJSONLD/src/main"
 export VIEW3DSCENE="C:/Users/jcarl/Downloads/castle-model-viewer-5.3.0-win64-x86_64/castle-model-viewer"
+export JSHUMANOIDS="C:/Users/jcarl/JSHumanoids/"
 
 
 

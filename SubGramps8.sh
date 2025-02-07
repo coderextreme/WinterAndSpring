@@ -269,13 +269,12 @@ dos2unix "${SKELETONWEIGHTSDIR}"/*_weights.txt
 exit_on_failure $? "Couldn't convert weights files in ${SKELETONWEIGHTSDIR}/*_weights.txt"
 echo "Final is ${FINAL}"
 
-"${VIEW3DSCENE}/castle-model-converter.exe" "${FINAL}" "${X3DJSONLD}/data/${CHARACTER}${VERSION}Final.x3d"  # final XML output
+"${VIEW3DSCENE}/castle-model-converter.exe" "${FINAL}" "${JSHUMANOIDS}/data/${CHARACTER}${VERSION}Final.x3d"  # final XML output
 
-pushd "${X3DJSONLD}/shell"
-#bash several.sh "../data/${CHARACTER}${VERSION}Final.x3d"
+pushd "${JSHUMANOIDS}/shell"
+bash several.sh "../data/${CHARACTER}${VERSION}Final.x3d"
+ls ../data
 popd
-pushd "${X3DJSONLD}/graaljs"
-#bash reorient.sh "net/coderextreme/data/${CHARACTER}${VERSION}Final.js"
-popd
-#cp "${X3DJSONLD}/graaljs/reorient.x3d" "${OUTPUTDIR}/${CHARACTER}${VERSION}Reorient.x3d"
-echo "${VIEW3DSCENE}/castle-model-viewer.exe" "${OUTPUTDIR}/${CHARACTER}${VERSION}Reorient.x3d"
+cp "${JSHUMANOIDS}/graaljs/reorient.x3d" "${OUTPUTDIR}/${CHARACTER}${VERSION}Reorient.x3d"
+"${VIEW3DSCENE}/castle-model-converter.exe" "${JSHUMANOIDS}/data/${CHARACTER}_WS.scaled1.x3d" "${OUTPUTDIR}/${CHARACTER}${VERSION}Scaled.x3dv"
+echo "${VIEW3DSCENE}/castle-model-viewer.exe" "${OUTPUTDIR}/${CHARACTER}${VERSION}Scaled.x3dv"
