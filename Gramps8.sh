@@ -4,9 +4,11 @@ export IFS=$'\n\t'
 
 export VERSION=8
 # Change where zips are found
-export DOWNLOADS="C:/Users/john/Downloads"
-export X3DJSONLD="C:/Users/john/X3DJSONLD/src/main"
-export VIEW3DSCENE="C:/Users/john/Downloads/view3dscene-4.3.0-win64-x86_64/view3dscene"
+export DOWNLOADS="C:/Users/jcarl/Downloads"
+export X3DJSONLD="C:/Users/jcarl/X3DJSONLD/src/main"
+export VIEW3DSCENE="C:/Users/jcarl/Downloads/castle-model-viewer-5.3.0-win64-x86_64/castle-model-viewer"
+
+
 
 # zip is copyed to input folder, then unpacked
 #export ZIPNAME="lily RV6_IPOSE.zip"

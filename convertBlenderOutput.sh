@@ -2,13 +2,13 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-# ~/Downloads/view3dscene-4.3.0-win64-x86_64/view3dscene/tovrmlx3d.exe --encoding classic "${PREFIX}".gltf > "${PREFIX}".gltfsource.x3dv 
+# C:/Users/jcarl/Downloads/castle-model-viewer-5.3.0-win64-x86_64/castle-model-viewer/castle-model-viewer.exe "${PREFIX}".gltf "${PREFIX}".gltfsource.x3dv 
 export WORKDIR=lily_73
 export PREFIX="${WORKDIR}"/"${WORKDIR}"
 mkdir "${WORKDIR}"
 cp  "${WORKDIR}".gltf "$WORKDIR"
-export VIEW3DSCENE=~/Downloads/view3dscene-4.3.0-win64-x86_64/view3dscene/
-export TOVRMLX3D="${VIEW3DSCENE}"tovrmlx3d.exe
+export VIEW3DSCENE=~/Downloads/castle-model-viewer-5.3.0-win64-x86_64/castle-model-viewer/
+export TOVRMLX3D="${VIEW3DSCENE}"castle-model-converter.exe
 export PROCESSDIR=ProcessDir73
 export INPUTDIR=InputDir73
 export VALIDATE=1
@@ -28,7 +28,8 @@ if [ $VALIDATE -eq 1 ]; then "${TOVRMLX3D}" --validate "${PREFIX}".x3dsource.x3d
 echo "perl moveupchildren.pl < "${PREFIX}".gltfsource.x3dv > "${PREFIX}"notranschild.x3dv"
 perl moveupchildren.pl < "${PREFIX}".gltfsource.x3dv > "${PREFIX}"notranschild.x3dv 
 # shouldn't validate
-# if [ $VALIDATE -eq 1 ]; then ~/Downloads/view3dscene-4.3.0-win64-x86_64/view3dscene/tovrmlx3d.exe --validate "${PREFIX}"notranschild.x3dv; else echo "Validate disabled"; else echo "Validate disabled"; fi
+# if [ $VALIDATE -eq 1 ]; then ~/Downloads/castle-model-viewer-5.3.0-win64-x86_64/castle-model-viewer/castle-model-converter.exe --validate "${PREFIX}"notranschild.x3dv; else echo "Validate disabled"; else echo "Validate disabled"; fi
+
 
 echo "perl haveTransformDEFaddName.pl < "${PREFIX}"notranschild.x3dv > "${PREFIX}"named.x3dv"
 perl haveTransformDEFaddName.pl < "${PREFIX}"notranschild.x3dv > "${PREFIX}"named.x3dv
@@ -97,7 +98,7 @@ echo "${TOVRMLX3D} --validate ${PREFIX}final.x3dv"
 if [ $VALIDATE -eq 1 ]; then "${TOVRMLX3D}" --validate "${PREFIX}"final.x3dv; else echo "Validate disabled"; fi
 
 
-echo "${VIEW3DSCENE}view3dscene.exe ${PREFIX}final.x3dv"
-"${VIEW3DSCENE}"view3dscene.exe "${PREFIX}"final.x3dv
+echo "${VIEW3DSCENE}castle-model-viewer.exe ${PREFIX}final.x3dv"
+"${VIEW3DSCENE}"castle-model-viewer.exe "${PREFIX}"final.x3dv
 # perl haveSkeletonAddSkin.pl
 # perl haveDEFaddName.pl < "${PREFIX}".gltfsource.x3dv > "${PREFIX}"named.x3dv

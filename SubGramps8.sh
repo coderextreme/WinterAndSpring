@@ -158,7 +158,7 @@ tail +2 "$VERTICES" | sed -e 's/root //' |
 	sed -e "s/\t\([-0-9e\.][-0-9e\.]*\) cm/\tprint(\1*0.01);/g" |
 	sed -e "s/\t\([-0-9e\.][-0-9e\.]*\) m/\tprint(\1*1.0);/g" |
 	sed -e "s/\t\([-0-9e\.][-0-9e\.]*\)/\tprint(\1);/g" |
-	sed -e "s/^\(print([0-9][0-9]*);\tprint\)\(([^)][^)]*)\)\(;\tprint\)\(([^)][^)]*)\)\(;\tprint\)\(([^)][^)]*)\)\(.*\)/\1(\2)\3(\4)\5(-\6)\7/" | tee "${PROCESSDIR}"/debugPoints0.txt |
+	sed -e "s/^\(print([0-9][0-9]*);\tprint\)\(([^)][^)]*)\)\(;\tprint\)\(([^)][^)]*)\)\(;\tprint\)\(([^)][^)]*)\)\(.*\)/\1(\2)\3(\4)\5(\6)\7/" | tee "${PROCESSDIR}"/debugPoints0.txt |
 	sed -e 's/\t/print("\\t");\t/g' |
 	sed -e 's/$/print("\\n");\t/g' |
 	sed -e 's/[<>`|]//g' |
@@ -269,13 +269,13 @@ dos2unix "${SKELETONWEIGHTSDIR}"/*_weights.txt
 exit_on_failure $? "Couldn't convert weights files in ${SKELETONWEIGHTSDIR}/*_weights.txt"
 echo "Final is ${FINAL}"
 
-"${VIEW3DSCENE}/tovrmlx3d.exe" --encoding=xml "${FINAL}" > "${X3DJSONLD}/data/${CHARACTER}${VERSION}Final.x3d"  # final XML output
+"${VIEW3DSCENE}/castle-model-converter.exe" "${FINAL}" "${X3DJSONLD}/data/${CHARACTER}${VERSION}Final.x3d"  # final XML output
 
 pushd "${X3DJSONLD}/shell"
-bash several.sh "../data/${CHARACTER}${VERSION}Final.x3d"
+#bash several.sh "../data/${CHARACTER}${VERSION}Final.x3d"
 popd
 pushd "${X3DJSONLD}/graaljs"
-bash reorient.sh "net/coderextreme/data/${CHARACTER}${VERSION}Final.js"
+#bash reorient.sh "net/coderextreme/data/${CHARACTER}${VERSION}Final.js"
 popd
-cp "${X3DJSONLD}/graaljs/reorient.x3d" "${OUTPUTDIR}/${CHARACTER}${VERSION}Reorient.x3d"
-echo "${VIEW3DSCENE}/view3dscene.exe" "${OUTPUTDIR}/${CHARACTER}${VERSION}Reorient.x3d"
+#cp "${X3DJSONLD}/graaljs/reorient.x3d" "${OUTPUTDIR}/${CHARACTER}${VERSION}Reorient.x3d"
+echo "${VIEW3DSCENE}/castle-model-viewer.exe" "${OUTPUTDIR}/${CHARACTER}${VERSION}Reorient.x3d"

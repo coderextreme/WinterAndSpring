@@ -102,7 +102,7 @@ $joint = "WRONG JOINT";
 #			} elsif ($line =~ /^([XYZxyz]):  *([-0-9.e][-0-9.e]*) m\r*$/) {
 #				my $axis = uc($1);
 #				my $number = $2;
-#				# $number =~ s/^00*$/0.0/;  # view3dscene requires floats--Not needed when you get number of floats right
+#				# $number =~ s/^00*$/0.0/;  # castle-model-viewer requires floats--Not needed when you get number of floats right
 #				#if ($axis == 'Z') {
 #				#$number = -$number;
 #				#}
@@ -111,7 +111,7 @@ $joint = "WRONG JOINT";
 #			} elsif ($line =~ /^([XYZxyz]):  *([-0-9.e][-0-9.e]*) ° *\r*$/) {
 #				my $axis = lc($1);
 #				my $number = $2;
-#				# $number =~ s/^00*$/0.0/;  # view3dscene requires floats--Not needed when you get number of floats right
+#				# $number =~ s/^00*$/0.0/;  # castle-model-viewer requires floats--Not needed when you get number of floats right
 #				$jointobj->{$axis} = $number;
 #				print STDERR "Rotation in degrees $axis = $number\n";
 #			}
