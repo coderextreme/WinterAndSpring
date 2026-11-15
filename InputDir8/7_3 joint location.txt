@@ -1,0 +1,454 @@
+Joint Location
+____________________________________
+humanoid_root
+X: 0 m
+Y: 0 m
+Z: 0 m
+
+____________________________________
+vl5
+Location
+X: 0.0009 m 
+Y: 0.4629 m
+Z: 0.0036 m
+
+____________________________________
+vl2
+Location
+X: 0.0014 m
+Y: 0.4932 m
+Z: 0.0036 m
+
+____________________________________
+
+vt11
+Location
+X: 0.0003 m
+Y: 0.5432 m
+Z: 0.0036 m
+
+
+____________________________________
+vt5
+Location
+X: 0.001 m
+Y: 0.637 m
+Z: 0.0036 m
+
+___________________________________
+
+vc4
+Location
+X: 0.0021 m
+Y: 0.714 m
+Z: 0.0036 m
+
+____________________________________
+
+skullbase
+Location
+X: -0.0004 m
+Y: 0.9213 m
+Z: 0.0053 m
+
+___________________________________
+
+
+r_sternoclavicular
+Location
+X: -0.0449 m
+Y: 0.6949 m
+Z: 0.0098 m
+
+____________________________________
+
+r_shoulder
+Location
+X: -0.1123 m
+Y: 0.6668 m
+Z: 0.0143 m
+
+____________________________________
+
+r_elbow
+Location
+X: -0.1329 m
+Y: 0.4986 m
+Z: 0.01 m
+
+____________________________________
+
+r_radiocarpal
+Location
+X: -0.144 m
+Y: 0.3549 m
+Z: -0.0059 m
+
+____________________________________
+
+r_carpometacarpal_1
+Location
+X: 0.0162 m
+Y: 0.3364 m
+Z: -0.0221 m
+
+______________________________________
+
+r_metacarpophalangeal_1
+Location
+X: -0.1354 m
+Y: 0.323 m
+Z: -0.0285 m
+
+___________________________________
+
+r_carpal_interphalangeal_1
+Location
+X: -0.1314 m
+Y: 0.3074 m
+Z: -0.0332 m
+
+____________________________________
+
+r_metacarpophalangeal_2
+Location
+X: -0.1566 m
+Y: 0.3002 m
+Z: -0.0159 m
+
+___________________________________
+
+r_carpal_proximal_interphalangeal_2
+Location
+X: -0.142 m
+Y: 0.2853 m
+Z: -0.0137 m
+
+____________________________________
+
+r_carpal_distal_interphalangeal_2
+Location
+X: -0.1345 m
+Y: 0.2782 m
+Z: -0.0126 m
+
+____________________________________
+
+
+r_metacarpophalangeal_3
+Location
+X: -0.1569 m
+Y: 0.3025 m
+Z: -0.004 m
+
+____________________________________
+
+r_carpal_proximal_interphalangeal_3
+Location
+X: -0.1484 m
+Y: 0.2798 m
+Z: -0.0023 m
+
+____________________________________
+
+r_carpal_distal_interphalangeal_3
+Location
+X: -0.1381 m
+Y: 0.2715 m
+Z: -0.0011 m
+
+____________________________________
+
+r_metacarpophalangeal_4
+Location
+X: -0.1538 m
+Y: 0.3063 m
+Z: 0.0062 m
+
+____________________________________
+
+r_carpal_proximal_interphalangeal_4
+Location
+X: -0.144 m
+Y: 0.2876 m
+Z: 0.0107 m
+
+____________________________________
+
+r_carpal_distal_interphalangeal_4
+Location
+X: -0.1382 m
+Y: 0.2774 m
+Z: 0.0137 m
+
+____________________________________
+
+
+r_metacarpophalangeal_5
+Location
+X: -0.1465 m
+Y: 0.3125 m
+Z: 0.0163 m
+
+__________________________
+
+r_carpal_proximal_interphalangeal_5
+Location
+X: -0.1373 m
+Y: 0.2996 m
+Z: 0.0212 m
+
+
+____________________________________
+
+r_carpal_distal_interphalangeal_5
+Location
+X: -0.1323 m
+Y: 0.2931 m
+Z: 0.0237 m
+
+____________________________________
+
+
+l_sternoclavicular
+Location
+X: 0.0469 m
+Y: 0.6948 m
+Z: 0.0052 m
+
+____________________________________
+
+l_shoulder
+Location
+X: 0.1118 m
+Y: 0.6662 m
+Z: 0.0115 m
+
+
+____________________________________
+
+l_elbow
+Location
+X: 0.123 m
+Y: 0.4967 m
+Z: 0.0084 m
+
+
+____________________________________
+
+l_radiocarpal
+Location
+X: 0.135 m
+Y: 0.3547 m
+Z: 0.0071 m
+
+
+
+______________________________________
+
+l_carpometacarpal_1
+Location
+X: 0.1324 m
+Y: 0.3374 m
+Z: -0.0121 m
+
+
+____________________________________
+
+l_metacarpophalangeal_1
+Location
+X: 0.1319 m
+Y: 0.3257 m
+Z: -0.0214 m
+
+____________________________________
+
+l_carpal_interphalangeal_1
+Location
+X: 0.1299 m
+Y: 0.3179 m
+Z: -0.0342 m
+
+____________________________________
+
+
+l_metacarpophalangeal_2
+Location
+X: 0.1411 m
+Y: 0.3068 m
+Z: -0.0184 m
+
+____________________________________
+
+
+l_carpal_proximal_interphalangeal_2
+Location
+X: 0.1433 m
+Y: 0.2799 m
+Z: -0.0201 m
+
+
+____________________________________
+
+l_carpal_distal_interphalangeal_2
+Location
+X: 0.1436 m
+Y: 0.2682 m
+Z: -0.021 m
+
+____________________________________
+
+
+l_metacarpophalangeal_3
+Location
+X: 0.1424 m
+Y: 0.2996 m
+Z: -0.0067 m
+
+____________________________________
+
+l_carpal_proximal_interphalangeal_3
+Location
+
+X: 0.1441 m
+Y: 0.2755 m
+Z: -0.0075 m
+
+____________________________________
+
+l_carpal_distal_interphalangeal_3
+Location
+
+X: 0.1457 m
+Y: 0.2639 m
+Z: -0.0117 m
+____________________________________
+
+l_metacarpophalangeal_4
+Location
+X: 0.1425 m
+Y: 0.3006 m
+Z: 0.0076 m
+
+____________________________________
+
+l_carpal_proximal_interphalangeal_4
+Location
+X:  0.1419 m
+Y:  0.2772 m
+Z:  0.0086 m
+
+____________________________________
+l_carpal_distal_interphalangeal_4
+Location
+X: 0.1415 m
+Y: 0.2651 m
+Z: 0.0086 m
+
+____________________________________
+
+
+l_metacarpophalangeal_5
+Location
+X: 0.1372 m
+Y: 0.3035 m
+Z: 0.0184 m
+
+
+____________________________________
+
+l_carpal_proximal_interphalangeal_5
+Location
+X: 0.1388 m
+Y: 0.2885 m
+Z: 0.0201 m
+
+____________________________________
+
+l_carpal_distal_interphalangeal_5
+Location
+X: 0.1392 m
+Y: 0.2798 m
+Z: 0.0207 m
+
+
+____________________________________
+
+sacroiliac
+Location
+X: 0.0007 m
+Y: 0.4563 m
+Z: 0.0003 m
+
+__________________________
+
+l_hip
+Location
+X: 0.0543 m
+Y: 0.3956 m
+Z: 0.0049 m
+
+
+____________________________________
+
+l_knee
+Location
+X: 0.054 m
+Y: 0.2421 m
+Z: -0.0939 m
+
+
+____________________________________
+
+l_talocrural
+Location
+X:  0.0649 m
+Y:  0.104 m
+Z:  0.0317 m
+
+
+____________________________________
+
+l_metatarsophalangeal_2
+Location
+X: 0.0685 m
+Y: 0.0747 m
+Z: -0.0413 m
+
+____________________________________
+
+
+r_hip
+Location
+X: -0.0532 m
+Y: 0.3952 m
+Z: 0.0054 m
+
+
+____________________________________
+
+r_knee
+Location
+X: -0.0575 m
+Y: 0.3343 m
+Z: 0.1766 m
+
+____________________________________
+
+r_talocrural
+Location
+X: -0.0734 m
+Y: 0.5212 m
+Z: 0.1712 m
+
+____________________________________
+
+r_metatarsophalangeal_2
+Location
+X: -0.08 m
+Y: 0.5068 m
+Z: 0.2486 m
+
+____________________________________
+
+
