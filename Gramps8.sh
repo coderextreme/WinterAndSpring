@@ -4,16 +4,13 @@ export IFS=$'\n\t'
 
 export VERSION=8
 # Change where zips are found
-export DOWNLOADS="C:/Users/jcarl/Downloads"
-export X3DJSONLD="C:/Users/jcarl/X3DJSONLD/src/main"
-export VIEW3DSCENE="C:/Users/jcarl/Downloads/castle-model-viewer-5.3.0-win64-x86_64/castle-model-viewer"
+export DOWNLOADS="/home/yottzumm/Downloads"
+export X3DJSONLD="/home/yottzumm/X3DJSONLD/src/main"
+export CASTLE_VIEWER="/home/yottzumm/Downloads/castle-model-viewer/castle-model-viewer"
+export CASTLE_CONVERTER="/home/yottzumm/Downloads/castle-model-viewer/castle-model-converter"
 export JSHUMANOIDS="C:/Users/jcarl/JSHumanoids/"
+export NODE=node
 
-
-
-# zip is copyed to input folder, then unpacked
-#export ZIPNAME="lily RV6_IPOSE.zip"
-#export INPUTZIP="${DOWNLOADS}"/"$ZIPNAME"
 
 # Here's where inputs are placed
 export INPUTDIR="InputDir${VERSION}"
@@ -53,6 +50,7 @@ export ANIMATIONS="${GENERATION}.Everything.txt" # where to pick up remaining an
 #export WEIGHTSFILE="GRAMPS_WIEGHTS.txt"  # joint index and a weight for skinCoord*
 #export WEIGHTSFILE="gramps_weight.txt"  # joint index and a weight for skinCoord*
 export WEIGHTSFILE="gramps_weights_final.txt"  # joint index and a weight for skinCoord*
+#export WEIGHTSFILE="gramps_weights_3000.txt"  # joint index and a weight for skinCoord*
 
 export CENTERSFILE="gramps_joint_location.txt"  # Joint locations and rotations
 #export CENTERSFILE="gramps_joint_location.txt.katy"  # Joint locations and rotations
@@ -62,11 +60,15 @@ export CENTERSFILE="gramps_joint_location.txt"  # Joint locations and rotations
 
 
 export VERTFILE="gramps_vertice.txt"  # incdex of point and metter based values
+# export VERTFILE="gramps_vertice_3000.txt"  # incdex of point and metter based values
 export TRIANGLEFILE="gramps_poly.txt"  # list of polygons, by number and 3 indexes into point array
+# export TRIANGLEFILE="gramps_poly_3000.txt"  # list of polygons, by number and 3 indexes into point array
+
 export ALTINPUTDIR="InputDir8"
-#export VERTFILE="gramps_points.txt"  # incdex of point and metter based values
+#export VERTFILE="gramps_points.txt"  # index of point and better based values
 #export TRIANGLEFILE="gramps_polygons.txt"  # list of polygons, by number and 3 indexes into point array
 export TEXTUREFILE="gramps_uvw.txt"  # UV file for constructing 2D triangles on texture, U and V are between 0 and 1
+# export TEXTUREFILE="gramps_uvw_3000.txt"  # UV file for constructing 2D triangles on texture, U and V are between 0 and 1
 
 # lily 7_3_animate.wrl
 # LILY_7_3_BLEND.blend

@@ -194,7 +194,7 @@ perl replacepointsvertices.pl "$REVISEDOUTPUT" "$FINAL" "$PROCESSDIR"/points.txt
 exit_on_failure $? "Replacing points failed. Command line was: perl replacepointsvertices.pl ${REVISEDOUTPUT} ${FINAL} ${PROCESSDIR}/points.txt  ${PROCESSDIR}/triangles.txt $PROCESSDIR/textures.txt"
 echo Now append "${ANIMATIONS}" with substitutions to $FINAL to add animation
 # we are adding Pitch, Roll, Stop and Touch because they are "standard" animations.  Also, Roll and Pitch are used as large Animations *and*  in granular ones
-node.exe takes.js < ${TAKESJSON}
+"${NODE}" takes.js < ${TAKESJSON}
 exit_on_failure $? "Couldn't create ${TAKES} usd takes.js < ${TAKESJSON}"
 cat "${TIMERS}" >> "${FINAL}"
 exit_on_failure $? "Couldn't append ${TIMERS} to ${FINAL}"
@@ -269,12 +269,13 @@ dos2unix "${SKELETONWEIGHTSDIR}"/*_weights.txt
 exit_on_failure $? "Couldn't convert weights files in ${SKELETONWEIGHTSDIR}/*_weights.txt"
 echo "Final is ${FINAL}"
 
-"${VIEW3DSCENE}/castle-model-converter.exe" "${FINAL}" "${JSHUMANOIDS}/data/${CHARACTER}${VERSION}Final.x3d"  # final XML output
+# "${CASTLE_CONVERTER}" "${FINAL}" "${JSHUMANOIDS}/data/${CHARACTER}${VERSION}Final.x3d"  # final XML output
 
-pushd "${JSHUMANOIDS}/shell"
-bash several.sh "../data/${CHARACTER}${VERSION}Final.x3d"
-ls ../data
-popd
-cp "${JSHUMANOIDS}/graaljs/reorient.x3d" "${OUTPUTDIR}/${CHARACTER}${VERSION}Reorient.x3d"
-"${VIEW3DSCENE}/castle-model-converter.exe" "${JSHUMANOIDS}/data/${CHARACTER}_WS.scaled1.x3d" "${OUTPUTDIR}/${CHARACTER}${VERSION}Scaled.x3dv"
-echo "${VIEW3DSCENE}/castle-model-viewer.exe" "${OUTPUTDIR}/${CHARACTER}${VERSION}Scaled.x3dv"
+#pushd "${JSHUMANOIDS}/shell"
+#bash several.sh "../data/${CHARACTER}${VERSION}Final.x3d"
+#ls ../data
+#popd
+#cp "${JSHUMANOIDS}/graaljs/reorient.x3d" "${OUTPUTDIR}/${CHARACTER}${VERSION}Reorient.x3d"
+#"${CASTLE_CONVERTER}" "${JSHUMANOIDS}/data/${CHARACTER}_WS.scaled1.x3d" "${OUTPUTDIR}/${CHARACTER}${VERSION}Scaled.x3dv"
+#echo "${CASTLE_VIEWER}" "${OUTPUTDIR}/${CHARACTER}${VERSION}Scaled.x3dv"
+"${CASTLE_VIEWER}" "${FINAL}"
