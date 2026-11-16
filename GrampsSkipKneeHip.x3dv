@@ -40,7 +40,7 @@ Transform {
 children [
 
 
-DEF Gramps HAnimHumanoid { name "Gramps_WS" scale -1 1 -1
+DEF Gramps HAnimHumanoid { name "Gramps_WS" scale 1 1 1
   skeleton [
 DEF Gramps_humanoid_root HAnimJoint { name "humanoid_root" center 0 0 0 skinCoordIndex [ ] skinCoordWeight [ ] children [
 DEF Gramps_sacrum HAnimSegment { name "sacrum" children [
@@ -448,7 +448,7 @@ USE Gramps_sacrum_pt
 ]
   skin [ 
 	DEF gramps_low_poly_001_TRANSFORM Transform {
-	# rotation 0 1 0 3.1416
+	rotation 0 1 0 3.1416
 	children [
 DEF babyskin Shape { # 
  appearance Appearance {
